@@ -1,0 +1,57 @@
+{
+  "schema": "dimensional-bottles-independent-reproduction/1.0",
+  "operator": "",
+  "captured_utc": "",
+  "device": {
+    "model": "",
+    "cpu": "",
+    "gpu": "",
+    "memory_gib": 0,
+    "operating_system": "",
+    "power_state": "",
+    "other_load": ""
+  },
+  "runtime": {
+    "node": "",
+    "electron": "",
+    "python": "",
+    "browser_user_agent": ""
+  },
+  "artifact": {
+    "zip_sha256": "",
+    "gate_passed": false,
+    "gate_count": "0/21"
+  },
+  "implementation": {
+    "repository": "kody-w/rapp-zoo",
+    "commit": "42f06849b576d5d596f210390ca04e5295ea86c7"
+  },
+  "run_a": {
+    "path": "independent-run-a.json",
+    "sha256": "",
+    "matcher_median_ms": 0,
+    "matcher_p95_ms": 0,
+    "renderer_ready_median_ms": 0,
+    "renderer_ready_p95_ms": 0
+  },
+  "run_b": {
+    "path": "independent-run-b.json",
+    "sha256": "",
+    "matcher_median_ms": 0,
+    "matcher_p95_ms": 0,
+    "renderer_ready_median_ms": 0,
+    "renderer_ready_p95_ms": 0
+  },
+  "same_frame": {
+    "path": "independent-same-frame.json",
+    "sha256": "",
+    "frame_json_unchanged": false,
+    "avatar_title": "",
+    "briefing_title": "",
+    "avatar_screenshot_sha256": "",
+    "briefing_screenshot_sha256": ""
+  },
+  "exact_acceptance_passed": false,
+  "deviations": [],
+  "notes": ""
+}

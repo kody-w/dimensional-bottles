@@ -1,0 +1,2285 @@
+{
+  "schema": "dimensional-bottles-benchmark/1.0",
+  "captured_utc": "2026-08-29T03:26:49.488Z",
+  "implementation": {
+    "repository": "kody-w/rapp-zoo",
+    "commit": "35e316fa4c4e95790d56db631abf6231698742c2",
+    "release_commit": "42f06849b576d5d596f210390ca04e5295ea86c7"
+  },
+  "artifact_binding": {
+    "benchmark_sha256": "b7384497e660d745b59d564fd956bbbf83ad24848598dc0c5a0cc51f76553533",
+    "paper_sha256_at_capture": "57ef24e6b72d10e0a2d4aedd01d45b2e828ba53d9fa384dcc4c0fecf6268b8b3",
+    "frame_fixture_sha256": "1a6279252929bbeb00f5226ba343946b8833701511222b76af52ed3714f8109b"
+  },
+  "host": {
+    "platform": "darwin",
+    "release": "25.6.0",
+    "architecture": "arm64",
+    "cpu": "Apple M4 Max",
+    "logical_cpus": 16,
+    "memory_gib": 128
+  },
+  "runtime": {
+    "electron": "43.2.0",
+    "brainstem": "0.6.16",
+    "renderer": "three-r128",
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) RAPPZoo/1.2.0 Chrome/150.0.7871.129 Electron/43.2.0 Safari/537.36"
+  },
+  "percentile_rule": "nearest-rank: sorted[ceil(p*n)-1]",
+  "catalog_ids": [
+    "holo-avatar",
+    "holo-briefing",
+    "holo-nexus"
+  ],
+  "frame": {
+    "frame_hash": "fbb86cd78e2092a836c4de9602f072d7b22f0f8bc5b1bf92dffb40f7ce01f0e5",
+    "kind": "body.pulse",
+    "payload": {
+      "dimensions": [
+        "briefing",
+        "status",
+        "census",
+        "character"
+      ],
+      "query": "Create a living briefing character for the current estate.",
+      "schema": "rapp-zoo-hologram-request/1.0",
+      "zoo": {
+        "holograms": 3,
+        "lineages": 0
+      }
+    },
+    "payload_hash": "61a950a31ef4aed90478cce32930f88f6b48d83e1e49ce614879a6634247be46",
+    "prev": null,
+    "prev_wave": null,
+    "seq": 0,
+    "sig": null,
+    "spec": "rapp/1",
+    "stream_id": "rappid:@kody-w/hologram-generator:21f419123bcb166e6fc46a43f53e63e5c8136005e7efcfb689bb80dbcc0453c2",
+    "utc": "2026-08-29T03:26:15.673Z"
+  },
+  "matcher": {
+    "warmup_requests": 10,
+    "summary": {
+      "n": 200,
+      "min_ms": 1.1,
+      "median_ms": 1.4,
+      "p95_ms": 1.6,
+      "max_ms": 2.6,
+      "mean_ms": 1.375
+    },
+    "samples": [
+      {
+        "trial": 0,
+        "elapsed_ms": 1.4000000059604645,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 1,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 2,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 3,
+        "elapsed_ms": 1.6000000014901161,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 4,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 5,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 6,
+        "elapsed_ms": 1.6000000014901161,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 7,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 8,
+        "elapsed_ms": 1.5,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 9,
+        "elapsed_ms": 1.2000000029802322,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 10,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 11,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 12,
+        "elapsed_ms": 1.3000000044703484,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 13,
+        "elapsed_ms": 1.3000000044703484,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 14,
+        "elapsed_ms": 1.5,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 15,
+        "elapsed_ms": 1.1999999955296516,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 16,
+        "elapsed_ms": 1.3000000044703484,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 17,
+        "elapsed_ms": 1.2999999970197678,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 18,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 19,
+        "elapsed_ms": 1.4000000059604645,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 20,
+        "elapsed_ms": 1.2999999970197678,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 21,
+        "elapsed_ms": 1.2999999970197678,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 22,
+        "elapsed_ms": 1.6000000014901161,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 23,
+        "elapsed_ms": 1.2000000029802322,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 24,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 25,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 26,
+        "elapsed_ms": 1.3000000044703484,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 27,
+        "elapsed_ms": 1.1999999955296516,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 28,
+        "elapsed_ms": 1.3000000044703484,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 29,
+        "elapsed_ms": 1.1999999955296516,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 30,
+        "elapsed_ms": 1.3000000044703484,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 31,
+        "elapsed_ms": 1.5999999940395355,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 32,
+        "elapsed_ms": 1.6000000014901161,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 33,
+        "elapsed_ms": 1.3000000044703484,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 34,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 35,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 36,
+        "elapsed_ms": 1.2000000029802322,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 37,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 38,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 39,
+        "elapsed_ms": 1.5,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 40,
+        "elapsed_ms": 1.2000000029802322,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 41,
+        "elapsed_ms": 1.2999999970197678,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 42,
+        "elapsed_ms": 1.1000000014901161,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 43,
+        "elapsed_ms": 1.7999999970197678,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 44,
+        "elapsed_ms": 1.5,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 45,
+        "elapsed_ms": 1.3000000044703484,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 46,
+        "elapsed_ms": 1.2999999970197678,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 47,
+        "elapsed_ms": 1.2999999970197678,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 48,
+        "elapsed_ms": 1.3000000044703484,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 49,
+        "elapsed_ms": 1.5,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 50,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 51,
+        "elapsed_ms": 1.2999999970197678,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 52,
+        "elapsed_ms": 1.3000000044703484,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 53,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 54,
+        "elapsed_ms": 1.6000000014901161,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 55,
+        "elapsed_ms": 1.6999999955296516,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 56,
+        "elapsed_ms": 1.4000000059604645,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 57,
+        "elapsed_ms": 1.2999999970197678,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 58,
+        "elapsed_ms": 1.2000000029802322,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 59,
+        "elapsed_ms": 1.1999999955296516,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 60,
+        "elapsed_ms": 1.1000000014901161,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 61,
+        "elapsed_ms": 1.5,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 62,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 63,
+        "elapsed_ms": 1.3000000044703484,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 64,
+        "elapsed_ms": 1.0999999940395355,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 65,
+        "elapsed_ms": 1.3000000044703484,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 66,
+        "elapsed_ms": 1.5,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 67,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 68,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 69,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 70,
+        "elapsed_ms": 1.2000000029802322,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 71,
+        "elapsed_ms": 1.2999999970197678,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 72,
+        "elapsed_ms": 1.2000000029802322,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 73,
+        "elapsed_ms": 1.2999999970197678,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 74,
+        "elapsed_ms": 1.4000000059604645,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 75,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 76,
+        "elapsed_ms": 1.1999999955296516,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 77,
+        "elapsed_ms": 1.2000000029802322,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 78,
+        "elapsed_ms": 1.2999999970197678,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 79,
+        "elapsed_ms": 1.6000000014901161,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 80,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 81,
+        "elapsed_ms": 1.4000000059604645,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 82,
+        "elapsed_ms": 1.0999999940395355,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 83,
+        "elapsed_ms": 1.3000000044703484,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 84,
+        "elapsed_ms": 1.1000000014901161,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 85,
+        "elapsed_ms": 1.1999999955296516,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 86,
+        "elapsed_ms": 1.5,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 87,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 88,
+        "elapsed_ms": 1.4000000059604645,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 89,
+        "elapsed_ms": 1.2999999970197678,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 90,
+        "elapsed_ms": 2.600000001490116,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 91,
+        "elapsed_ms": 2.0999999940395355,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 92,
+        "elapsed_ms": 1.5,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 93,
+        "elapsed_ms": 1.4000000059604645,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 94,
+        "elapsed_ms": 1.0999999940395355,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 95,
+        "elapsed_ms": 1.4000000059604645,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 96,
+        "elapsed_ms": 1.2999999970197678,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 97,
+        "elapsed_ms": 1.5,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 98,
+        "elapsed_ms": 1.6000000014901161,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 99,
+        "elapsed_ms": 1.6000000014901161,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 100,
+        "elapsed_ms": 1.5,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 101,
+        "elapsed_ms": 1.1999999955296516,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 102,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 103,
+        "elapsed_ms": 1.8000000044703484,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 104,
+        "elapsed_ms": 1.2999999970197678,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 105,
+        "elapsed_ms": 1.2000000029802322,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 106,
+        "elapsed_ms": 1.1999999955296516,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 107,
+        "elapsed_ms": 1.2000000029802322,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 108,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 109,
+        "elapsed_ms": 1.3000000044703484,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 110,
+        "elapsed_ms": 1.2999999970197678,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 111,
+        "elapsed_ms": 1.2999999970197678,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 112,
+        "elapsed_ms": 1.2000000029802322,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 113,
+        "elapsed_ms": 1.2999999970197678,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 114,
+        "elapsed_ms": 1.5,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 115,
+        "elapsed_ms": 1.4000000059604645,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 116,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 117,
+        "elapsed_ms": 1.1999999955296516,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 118,
+        "elapsed_ms": 1.1000000014901161,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 119,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 120,
+        "elapsed_ms": 1.4000000059604645,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 121,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 122,
+        "elapsed_ms": 1.5,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 123,
+        "elapsed_ms": 1.2999999970197678,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 124,
+        "elapsed_ms": 1.3000000044703484,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 125,
+        "elapsed_ms": 1.1000000014901161,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 126,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 127,
+        "elapsed_ms": 1.1000000014901161,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 128,
+        "elapsed_ms": 1.2999999970197678,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 129,
+        "elapsed_ms": 1.3000000044703484,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 130,
+        "elapsed_ms": 1.2999999970197678,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 131,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 132,
+        "elapsed_ms": 1.3000000044703484,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 133,
+        "elapsed_ms": 1.2999999970197678,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 134,
+        "elapsed_ms": 1.6000000014901161,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 135,
+        "elapsed_ms": 1.2000000029802322,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 136,
+        "elapsed_ms": 1.5,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 137,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 138,
+        "elapsed_ms": 1.2999999970197678,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 139,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 140,
+        "elapsed_ms": 1.2000000029802322,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 141,
+        "elapsed_ms": 1.2999999970197678,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 142,
+        "elapsed_ms": 1.4000000059604645,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 143,
+        "elapsed_ms": 1.2999999970197678,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 144,
+        "elapsed_ms": 1.1000000014901161,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 145,
+        "elapsed_ms": 1.2999999970197678,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 146,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 147,
+        "elapsed_ms": 1.5,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 148,
+        "elapsed_ms": 1.5,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 149,
+        "elapsed_ms": 1.4000000059604645,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 150,
+        "elapsed_ms": 1.2999999970197678,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 151,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 152,
+        "elapsed_ms": 1.3000000044703484,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 153,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 154,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 155,
+        "elapsed_ms": 1.2999999970197678,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 156,
+        "elapsed_ms": 1.3000000044703484,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 157,
+        "elapsed_ms": 1.2999999970197678,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 158,
+        "elapsed_ms": 1.6000000014901161,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 159,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 160,
+        "elapsed_ms": 1.2999999970197678,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 161,
+        "elapsed_ms": 1.5,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 162,
+        "elapsed_ms": 1.1000000014901161,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 163,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 164,
+        "elapsed_ms": 1.2000000029802322,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 165,
+        "elapsed_ms": 1.5,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 166,
+        "elapsed_ms": 1.6000000014901161,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 167,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 168,
+        "elapsed_ms": 1.2999999970197678,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 169,
+        "elapsed_ms": 1.4000000059604645,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 170,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 171,
+        "elapsed_ms": 1.6000000014901161,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 172,
+        "elapsed_ms": 1.2999999970197678,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 173,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 174,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 175,
+        "elapsed_ms": 1.4000000059604645,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 176,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 177,
+        "elapsed_ms": 1.5,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 178,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 179,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 180,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 181,
+        "elapsed_ms": 1.8000000044703484,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 182,
+        "elapsed_ms": 1.5,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 183,
+        "elapsed_ms": 1.2999999970197678,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 184,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 185,
+        "elapsed_ms": 1.1000000014901161,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 186,
+        "elapsed_ms": 1.3000000044703484,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 187,
+        "elapsed_ms": 1.0999999940395355,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 188,
+        "elapsed_ms": 1.3000000044703484,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 189,
+        "elapsed_ms": 1.6999999955296516,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 190,
+        "elapsed_ms": 1.6000000014901161,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 191,
+        "elapsed_ms": 1.7000000029802322,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 192,
+        "elapsed_ms": 1.2999999970197678,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 193,
+        "elapsed_ms": 1.3000000044703484,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 194,
+        "elapsed_ms": 1.5999999940395355,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 195,
+        "elapsed_ms": 1.4000000059604645,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 196,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 197,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 198,
+        "elapsed_ms": 1.3999999985098839,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      },
+      {
+        "trial": 199,
+        "elapsed_ms": 1.3000000044703484,
+        "selected_bottle": "holo-briefing",
+        "mode": "dimensional",
+        "score": 12
+      }
+    ]
+  },
+  "projection": {
+    "order_strategy": "three-order Latin rotation; each bottle appears 10 times in each position",
+    "summary_ready_mixed_bottle_cache": {
+      "n": 90,
+      "min_ms": 85.5,
+      "median_ms": 145.7,
+      "p95_ms": 271.1,
+      "max_ms": 363.8,
+      "mean_ms": 154.982
+    },
+    "summary_bound_mixed_bottle_cache": {
+      "n": 90,
+      "min_ms": 97.3,
+      "median_ms": 149.5,
+      "p95_ms": 274.9,
+      "max_ms": 367.7,
+      "mean_ms": 159.557
+    },
+    "by_bottle": {
+      "holo-avatar": {
+        "ready": {
+          "n": 30,
+          "min_ms": 85.5,
+          "median_ms": 157.1,
+          "p95_ms": 231.6,
+          "max_ms": 307,
+          "mean_ms": 155.387
+        },
+        "bound": {
+          "n": 30,
+          "min_ms": 97.3,
+          "median_ms": 160.7,
+          "p95_ms": 235.3,
+          "max_ms": 311.2,
+          "mean_ms": 160.357
+        },
+        "order_positions": {
+          "0": 10,
+          "1": 10,
+          "2": 10
+        }
+      },
+      "holo-briefing": {
+        "ready": {
+          "n": 30,
+          "min_ms": 97.5,
+          "median_ms": 132.8,
+          "p95_ms": 275.9,
+          "max_ms": 291.8,
+          "mean_ms": 156.54
+        },
+        "bound": {
+          "n": 30,
+          "min_ms": 102.5,
+          "median_ms": 136.4,
+          "p95_ms": 279.7,
+          "max_ms": 295.5,
+          "mean_ms": 161.053
+        },
+        "order_positions": {
+          "0": 10,
+          "1": 10,
+          "2": 10
+        }
+      },
+      "holo-nexus": {
+        "ready": {
+          "n": 30,
+          "min_ms": 95,
+          "median_ms": 132,
+          "p95_ms": 230.9,
+          "max_ms": 363.8,
+          "mean_ms": 153.02
+        },
+        "bound": {
+          "n": 30,
+          "min_ms": 100.5,
+          "median_ms": 135.7,
+          "p95_ms": 234.7,
+          "max_ms": 367.7,
+          "mean_ms": 157.26
+        },
+        "order_positions": {
+          "0": 10,
+          "1": 10,
+          "2": 10
+        }
+      }
+    },
+    "samples": [
+      {
+        "trial": 0,
+        "round": 0,
+        "order_position": 0,
+        "bottle": "holo-avatar",
+        "ready_ms": 168,
+        "bound_ms": 171.60000000149012
+      },
+      {
+        "trial": 1,
+        "round": 0,
+        "order_position": 1,
+        "bottle": "holo-briefing",
+        "ready_ms": 112.09999999403954,
+        "bound_ms": 116.29999999701977
+      },
+      {
+        "trial": 2,
+        "round": 0,
+        "order_position": 2,
+        "bottle": "holo-nexus",
+        "ready_ms": 101.5,
+        "bound_ms": 105.30000000447035
+      },
+      {
+        "trial": 3,
+        "round": 1,
+        "order_position": 0,
+        "bottle": "holo-briefing",
+        "ready_ms": 99.09999999403954,
+        "bound_ms": 105.09999999403954
+      },
+      {
+        "trial": 4,
+        "round": 1,
+        "order_position": 1,
+        "bottle": "holo-nexus",
+        "ready_ms": 114.19999999552965,
+        "bound_ms": 120
+      },
+      {
+        "trial": 5,
+        "round": 1,
+        "order_position": 2,
+        "bottle": "holo-avatar",
+        "ready_ms": 142.19999999552965,
+        "bound_ms": 145.89999999850988
+      },
+      {
+        "trial": 6,
+        "round": 2,
+        "order_position": 0,
+        "bottle": "holo-nexus",
+        "ready_ms": 126.60000000149012,
+        "bound_ms": 130.39999999850988
+      },
+      {
+        "trial": 7,
+        "round": 2,
+        "order_position": 1,
+        "bottle": "holo-avatar",
+        "ready_ms": 164,
+        "bound_ms": 167.89999999850988
+      },
+      {
+        "trial": 8,
+        "round": 2,
+        "order_position": 2,
+        "bottle": "holo-briefing",
+        "ready_ms": 266,
+        "bound_ms": 268.5
+      },
+      {
+        "trial": 9,
+        "round": 3,
+        "order_position": 0,
+        "bottle": "holo-avatar",
+        "ready_ms": 145.69999999552965,
+        "bound_ms": 149.60000000149012
+      },
+      {
+        "trial": 10,
+        "round": 3,
+        "order_position": 1,
+        "bottle": "holo-briefing",
+        "ready_ms": 98.60000000149012,
+        "bound_ms": 104.20000000298023
+      },
+      {
+        "trial": 11,
+        "round": 3,
+        "order_position": 2,
+        "bottle": "holo-nexus",
+        "ready_ms": 114.89999999850988,
+        "bound_ms": 118.79999999701977
+      },
+      {
+        "trial": 12,
+        "round": 4,
+        "order_position": 0,
+        "bottle": "holo-briefing",
+        "ready_ms": 97.5,
+        "bound_ms": 103.39999999850988
+      },
+      {
+        "trial": 13,
+        "round": 4,
+        "order_position": 1,
+        "bottle": "holo-nexus",
+        "ready_ms": 127,
+        "bound_ms": 130.69999999552965
+      },
+      {
+        "trial": 14,
+        "round": 4,
+        "order_position": 2,
+        "bottle": "holo-avatar",
+        "ready_ms": 115.39999999850988,
+        "bound_ms": 119
+      },
+      {
+        "trial": 15,
+        "round": 5,
+        "order_position": 0,
+        "bottle": "holo-nexus",
+        "ready_ms": 214.70000000298023,
+        "bound_ms": 218.29999999701977
+      },
+      {
+        "trial": 16,
+        "round": 5,
+        "order_position": 1,
+        "bottle": "holo-avatar",
+        "ready_ms": 159.19999999552965,
+        "bound_ms": 162.79999999701977
+      },
+      {
+        "trial": 17,
+        "round": 5,
+        "order_position": 2,
+        "bottle": "holo-briefing",
+        "ready_ms": 120.19999999552965,
+        "bound_ms": 125.69999999552965
+      },
+      {
+        "trial": 18,
+        "round": 6,
+        "order_position": 0,
+        "bottle": "holo-avatar",
+        "ready_ms": 158.5,
+        "bound_ms": 162
+      },
+      {
+        "trial": 19,
+        "round": 6,
+        "order_position": 1,
+        "bottle": "holo-briefing",
+        "ready_ms": 271.1000000014901,
+        "bound_ms": 274.8999999985099
+      },
+      {
+        "trial": 20,
+        "round": 6,
+        "order_position": 2,
+        "bottle": "holo-nexus",
+        "ready_ms": 206.39999999850988,
+        "bound_ms": 210.19999999552965
+      },
+      {
+        "trial": 21,
+        "round": 7,
+        "order_position": 0,
+        "bottle": "holo-briefing",
+        "ready_ms": 160,
+        "bound_ms": 165.5
+      },
+      {
+        "trial": 22,
+        "round": 7,
+        "order_position": 1,
+        "bottle": "holo-nexus",
+        "ready_ms": 170.39999999850988,
+        "bound_ms": 174.20000000298023
+      },
+      {
+        "trial": 23,
+        "round": 7,
+        "order_position": 2,
+        "bottle": "holo-avatar",
+        "ready_ms": 231.60000000149012,
+        "bound_ms": 235.30000000447035
+      },
+      {
+        "trial": 24,
+        "round": 8,
+        "order_position": 0,
+        "bottle": "holo-nexus",
+        "ready_ms": 145.70000000298023,
+        "bound_ms": 149.5
+      },
+      {
+        "trial": 25,
+        "round": 8,
+        "order_position": 1,
+        "bottle": "holo-avatar",
+        "ready_ms": 156.29999999701977,
+        "bound_ms": 160
+      },
+      {
+        "trial": 26,
+        "round": 8,
+        "order_position": 2,
+        "bottle": "holo-briefing",
+        "ready_ms": 151.89999999850988,
+        "bound_ms": 155.70000000298023
+      },
+      {
+        "trial": 27,
+        "round": 9,
+        "order_position": 0,
+        "bottle": "holo-avatar",
+        "ready_ms": 164.39999999850988,
+        "bound_ms": 168.19999999552965
+      },
+      {
+        "trial": 28,
+        "round": 9,
+        "order_position": 1,
+        "bottle": "holo-briefing",
+        "ready_ms": 110.5,
+        "bound_ms": 116.20000000298023
+      },
+      {
+        "trial": 29,
+        "round": 9,
+        "order_position": 2,
+        "bottle": "holo-nexus",
+        "ready_ms": 139.70000000298023,
+        "bound_ms": 145.10000000149012
+      },
+      {
+        "trial": 30,
+        "round": 10,
+        "order_position": 0,
+        "bottle": "holo-briefing",
+        "ready_ms": 193.79999999701977,
+        "bound_ms": 197.89999999850988
+      },
+      {
+        "trial": 31,
+        "round": 10,
+        "order_position": 1,
+        "bottle": "holo-nexus",
+        "ready_ms": 131.69999999552965,
+        "bound_ms": 135.5
+      },
+      {
+        "trial": 32,
+        "round": 10,
+        "order_position": 2,
+        "bottle": "holo-avatar",
+        "ready_ms": 160.09999999403954,
+        "bound_ms": 163.59999999403954
+      },
+      {
+        "trial": 33,
+        "round": 11,
+        "order_position": 0,
+        "bottle": "holo-nexus",
+        "ready_ms": 163.69999999552965,
+        "bound_ms": 167.29999999701977
+      },
+      {
+        "trial": 34,
+        "round": 11,
+        "order_position": 1,
+        "bottle": "holo-avatar",
+        "ready_ms": 206.69999999552965,
+        "bound_ms": 210.09999999403954
+      },
+      {
+        "trial": 35,
+        "round": 11,
+        "order_position": 2,
+        "bottle": "holo-briefing",
+        "ready_ms": 120.59999999403954,
+        "bound_ms": 126.19999999552965
+      },
+      {
+        "trial": 36,
+        "round": 12,
+        "order_position": 0,
+        "bottle": "holo-avatar",
+        "ready_ms": 106.19999999552965,
+        "bound_ms": 115.29999999701977
+      },
+      {
+        "trial": 37,
+        "round": 12,
+        "order_position": 1,
+        "bottle": "holo-briefing",
+        "ready_ms": 216.29999999701977,
+        "bound_ms": 220.10000000149012
+      },
+      {
+        "trial": 38,
+        "round": 12,
+        "order_position": 2,
+        "bottle": "holo-nexus",
+        "ready_ms": 164.89999999850988,
+        "bound_ms": 168.60000000149012
+      },
+      {
+        "trial": 39,
+        "round": 13,
+        "order_position": 0,
+        "bottle": "holo-briefing",
+        "ready_ms": 113.30000000447035,
+        "bound_ms": 119.20000000298023
+      },
+      {
+        "trial": 40,
+        "round": 13,
+        "order_position": 1,
+        "bottle": "holo-nexus",
+        "ready_ms": 99.29999999701977,
+        "bound_ms": 102.89999999850988
+      },
+      {
+        "trial": 41,
+        "round": 13,
+        "order_position": 2,
+        "bottle": "holo-avatar",
+        "ready_ms": 174.79999999701977,
+        "bound_ms": 178.39999999850988
+      },
+      {
+        "trial": 42,
+        "round": 14,
+        "order_position": 0,
+        "bottle": "holo-nexus",
+        "ready_ms": 115.5,
+        "bound_ms": 119
+      },
+      {
+        "trial": 43,
+        "round": 14,
+        "order_position": 1,
+        "bottle": "holo-avatar",
+        "ready_ms": 169.40000000596046,
+        "bound_ms": 173.10000000149012
+      },
+      {
+        "trial": 44,
+        "round": 14,
+        "order_position": 2,
+        "bottle": "holo-briefing",
+        "ready_ms": 132.79999999701977,
+        "bound_ms": 136.39999999850988
+      },
+      {
+        "trial": 45,
+        "round": 15,
+        "order_position": 0,
+        "bottle": "holo-avatar",
+        "ready_ms": 114.69999999552965,
+        "bound_ms": 118.29999999701977
+      },
+      {
+        "trial": 46,
+        "round": 15,
+        "order_position": 1,
+        "bottle": "holo-briefing",
+        "ready_ms": 98.79999999701977,
+        "bound_ms": 102.5
+      },
+      {
+        "trial": 47,
+        "round": 15,
+        "order_position": 2,
+        "bottle": "holo-nexus",
+        "ready_ms": 116.20000000298023,
+        "bound_ms": 122.20000000298023
+      },
+      {
+        "trial": 48,
+        "round": 16,
+        "order_position": 0,
+        "bottle": "holo-briefing",
+        "ready_ms": 153.30000000447035,
+        "bound_ms": 157
+      },
+      {
+        "trial": 49,
+        "round": 16,
+        "order_position": 1,
+        "bottle": "holo-nexus",
+        "ready_ms": 152.5,
+        "bound_ms": 156.40000000596046
+      },
+      {
+        "trial": 50,
+        "round": 16,
+        "order_position": 2,
+        "bottle": "holo-avatar",
+        "ready_ms": 129,
+        "bound_ms": 132.39999999850988
+      },
+      {
+        "trial": 51,
+        "round": 17,
+        "order_position": 0,
+        "bottle": "holo-nexus",
+        "ready_ms": 126.89999999850988,
+        "bound_ms": 132.60000000149012
+      },
+      {
+        "trial": 52,
+        "round": 17,
+        "order_position": 1,
+        "bottle": "holo-avatar",
+        "ready_ms": 92.60000000149012,
+        "bound_ms": 100.80000000447035
+      },
+      {
+        "trial": 53,
+        "round": 17,
+        "order_position": 2,
+        "bottle": "holo-briefing",
+        "ready_ms": 143.10000000149012,
+        "bound_ms": 146.89999999850988
+      },
+      {
+        "trial": 54,
+        "round": 18,
+        "order_position": 0,
+        "bottle": "holo-avatar",
+        "ready_ms": 179.30000000447035,
+        "bound_ms": 187.89999999850988
+      },
+      {
+        "trial": 55,
+        "round": 18,
+        "order_position": 1,
+        "bottle": "holo-briefing",
+        "ready_ms": 179.29999999701977,
+        "bound_ms": 185.29999999701977
+      },
+      {
+        "trial": 56,
+        "round": 18,
+        "order_position": 2,
+        "bottle": "holo-nexus",
+        "ready_ms": 230.90000000596046,
+        "bound_ms": 234.70000000298023
+      },
+      {
+        "trial": 57,
+        "round": 19,
+        "order_position": 0,
+        "bottle": "holo-briefing",
+        "ready_ms": 244.60000000149012,
+        "bound_ms": 248.39999999850988
+      },
+      {
+        "trial": 58,
+        "round": 19,
+        "order_position": 1,
+        "bottle": "holo-nexus",
+        "ready_ms": 127.89999999850988,
+        "bound_ms": 133.39999999850988
+      },
+      {
+        "trial": 59,
+        "round": 19,
+        "order_position": 2,
+        "bottle": "holo-avatar",
+        "ready_ms": 85.5,
+        "bound_ms": 97.29999999701977
+      },
+      {
+        "trial": 60,
+        "round": 20,
+        "order_position": 0,
+        "bottle": "holo-nexus",
+        "ready_ms": 197.20000000298023,
+        "bound_ms": 200.80000000447035
+      },
+      {
+        "trial": 61,
+        "round": 20,
+        "order_position": 1,
+        "bottle": "holo-avatar",
+        "ready_ms": 213.30000000447035,
+        "bound_ms": 216.80000000447035
+      },
+      {
+        "trial": 62,
+        "round": 20,
+        "order_position": 2,
+        "bottle": "holo-briefing",
+        "ready_ms": 275.90000000596046,
+        "bound_ms": 279.70000000298023
+      },
+      {
+        "trial": 63,
+        "round": 21,
+        "order_position": 0,
+        "bottle": "holo-avatar",
+        "ready_ms": 307,
+        "bound_ms": 311.19999999552965
+      },
+      {
+        "trial": 64,
+        "round": 21,
+        "order_position": 1,
+        "bottle": "holo-briefing",
+        "ready_ms": 291.79999999701977,
+        "bound_ms": 295.5
+      },
+      {
+        "trial": 65,
+        "round": 21,
+        "order_position": 2,
+        "bottle": "holo-nexus",
+        "ready_ms": 363.79999999701977,
+        "bound_ms": 367.69999999552965
+      },
+      {
+        "trial": 66,
+        "round": 22,
+        "order_position": 0,
+        "bottle": "holo-briefing",
+        "ready_ms": 110.20000000298023,
+        "bound_ms": 113.70000000298023
+      },
+      {
+        "trial": 67,
+        "round": 22,
+        "order_position": 1,
+        "bottle": "holo-nexus",
+        "ready_ms": 101.89999999850988,
+        "bound_ms": 107.60000000149012
+      },
+      {
+        "trial": 68,
+        "round": 22,
+        "order_position": 2,
+        "bottle": "holo-avatar",
+        "ready_ms": 94.79999999701977,
+        "bound_ms": 103.70000000298023
+      },
+      {
+        "trial": 69,
+        "round": 23,
+        "order_position": 0,
+        "bottle": "holo-nexus",
+        "ready_ms": 150.5,
+        "bound_ms": 154.20000000298023
+      },
+      {
+        "trial": 70,
+        "round": 23,
+        "order_position": 1,
+        "bottle": "holo-avatar",
+        "ready_ms": 204.89999999850988,
+        "bound_ms": 208.59999999403954
+      },
+      {
+        "trial": 71,
+        "round": 23,
+        "order_position": 2,
+        "bottle": "holo-briefing",
+        "ready_ms": 119.5,
+        "bound_ms": 125.10000000149012
+      },
+      {
+        "trial": 72,
+        "round": 24,
+        "order_position": 0,
+        "bottle": "holo-avatar",
+        "ready_ms": 149.60000000149012,
+        "bound_ms": 153.5
+      },
+      {
+        "trial": 73,
+        "round": 24,
+        "order_position": 1,
+        "bottle": "holo-briefing",
+        "ready_ms": 137.20000000298023,
+        "bound_ms": 141
+      },
+      {
+        "trial": 74,
+        "round": 24,
+        "order_position": 2,
+        "bottle": "holo-nexus",
+        "ready_ms": 160,
+        "bound_ms": 165.59999999403954
+      },
+      {
+        "trial": 75,
+        "round": 25,
+        "order_position": 0,
+        "bottle": "holo-briefing",
+        "ready_ms": 101.60000000149012,
+        "bound_ms": 107.30000000447035
+      },
+      {
+        "trial": 76,
+        "round": 25,
+        "order_position": 1,
+        "bottle": "holo-nexus",
+        "ready_ms": 123.89999999850988,
+        "bound_ms": 127.79999999701977
+      },
+      {
+        "trial": 77,
+        "round": 25,
+        "order_position": 2,
+        "bottle": "holo-avatar",
+        "ready_ms": 119.19999999552965,
+        "bound_ms": 127.60000000149012
+      },
+      {
+        "trial": 78,
+        "round": 26,
+        "order_position": 0,
+        "bottle": "holo-nexus",
+        "ready_ms": 157.5,
+        "bound_ms": 161
+      },
+      {
+        "trial": 79,
+        "round": 26,
+        "order_position": 1,
+        "bottle": "holo-avatar",
+        "ready_ms": 157.10000000149012,
+        "bound_ms": 160.70000000298023
+      },
+      {
+        "trial": 80,
+        "round": 26,
+        "order_position": 2,
+        "bottle": "holo-briefing",
+        "ready_ms": 167.30000000447035,
+        "bound_ms": 171
+      },
+      {
+        "trial": 81,
+        "round": 27,
+        "order_position": 0,
+        "bottle": "holo-avatar",
+        "ready_ms": 161,
+        "bound_ms": 164.89999999850988
+      },
+      {
+        "trial": 82,
+        "round": 27,
+        "order_position": 1,
+        "bottle": "holo-briefing",
+        "ready_ms": 177.79999999701977,
+        "bound_ms": 181.60000000149012
+      },
+      {
+        "trial": 83,
+        "round": 27,
+        "order_position": 2,
+        "bottle": "holo-nexus",
+        "ready_ms": 95,
+        "bound_ms": 100.5
+      },
+      {
+        "trial": 84,
+        "round": 28,
+        "order_position": 0,
+        "bottle": "holo-briefing",
+        "ready_ms": 131.39999999850988,
+        "bound_ms": 135.19999999552965
+      },
+      {
+        "trial": 85,
+        "round": 28,
+        "order_position": 1,
+        "bottle": "holo-nexus",
+        "ready_ms": 132,
+        "bound_ms": 135.70000000298023
+      },
+      {
+        "trial": 86,
+        "round": 28,
+        "order_position": 2,
+        "bottle": "holo-avatar",
+        "ready_ms": 141.5,
+        "bound_ms": 145.29999999701977
+      },
+      {
+        "trial": 87,
+        "round": 29,
+        "order_position": 0,
+        "bottle": "holo-nexus",
+        "ready_ms": 218.19999999552965,
+        "bound_ms": 221.79999999701977
+      },
+      {
+        "trial": 88,
+        "round": 29,
+        "order_position": 1,
+        "bottle": "holo-avatar",
+        "ready_ms": 89.59999999403954,
+        "bound_ms": 98.89999999850988
+      },
+      {
+        "trial": 89,
+        "round": 29,
+        "order_position": 2,
+        "bottle": "holo-briefing",
+        "ready_ms": 100.60000000149012,
+        "bound_ms": 106.10000000149012
+      }
+    ]
+  }
+}

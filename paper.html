@@ -1,0 +1,726 @@
+<!doctype html>
+<html lang="en">
+<head>
+<script>
+  (() => {
+    const param = new URLSearchParams(window.location.search).get("scoutTheme");
+    const theme =
+      param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", theme);
+  })();
+</script>
+<script>
+  (() => {
+    if (!new URLSearchParams(window.location.search).has("scoutTheme")) {
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+  })();
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dimensional Bottles — Cached Static Intelligence with Per-Call Data Slosh over Immutable Frames</title>
+<style>
+:root {
+  color-scheme: light;
+  --cp-bg: #f7f4ef;
+  --cp-bg-elevated: #fcfbf8;
+  --cp-surface: #ffffff;
+  --cp-surface-soft: #f5f5f5;
+  --cp-border: #dedede;
+  --cp-border-strong: #919191;
+  --cp-text: #242424;
+  --cp-text-muted: #5c5c5c;
+  --cp-text-soft: #6f6f6f;
+  --cp-accent: #b11f4b;
+  --cp-accent-hover: #9a1a41;
+  --cp-accent-soft: rgba(177, 31, 75, 0.08);
+  --cp-accent-fg: #ffffff;
+  --cp-success: #16a34a;
+  --cp-danger: #dc2626;
+  --cp-warning: #f59e0b;
+  --cp-link: #0078d4;
+  --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+  --cp-overlay: rgba(255, 255, 255, 0.8);
+  --cp-panel: rgba(255, 255, 255, 0.86);
+  --cp-panel-strong: rgba(255, 255, 255, 0.96);
+  --cp-sheen: rgba(255, 255, 255, 0.55);
+  --cp-highlight: rgba(177, 31, 75, 0.12);
+}
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --cp-bg: #3d3b3a;
+  --cp-bg-elevated: #343231;
+  --cp-surface: #292929;
+  --cp-surface-soft: #2e2e2e;
+  --cp-border: #474747;
+  --cp-border-strong: #5f5f5f;
+  --cp-text: #dedede;
+  --cp-text-muted: #919191;
+  --cp-text-soft: #b0b0b0;
+  --cp-accent: #fd8ea1;
+  --cp-accent-hover: #fb7b91;
+  --cp-accent-soft: rgba(253, 142, 161, 0.14);
+  --cp-accent-fg: #1a1a1a;
+  --cp-success: #4ade80;
+  --cp-danger: #f87171;
+  --cp-warning: #fbbf24;
+  --cp-link: #4da6ff;
+  --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+  --cp-overlay: rgba(41, 41, 41, 0.88);
+  --cp-panel: rgba(41, 41, 41, 0.72);
+  --cp-panel-strong: rgba(41, 41, 41, 0.96);
+  --cp-sheen: rgba(255, 255, 255, 0.04);
+  --cp-highlight: rgba(253, 142, 161, 0.12);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--cp-surface);
+  color: var(--cp-text);
+  font: 17px/1.65 Georgia, "Times New Roman", serif;
+}
+main { max-width: 46rem; margin: 0 auto; padding: 3rem 1.2rem 5rem; }
+h1 { margin: 0 0 0.4rem; font-size: 1.72rem; line-height: 1.3; letter-spacing: -0.015em; }
+h2 {
+  margin: 2.2rem 0 0.6rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--cp-border);
+  font-size: 1.2rem;
+  line-height: 1.35;
+}
+h3 { margin: 1.4rem 0 0.35rem; font-size: 1.02rem; line-height: 1.4; }
+p, li { text-align: justify; hyphens: auto; }
+p { margin: 0.7rem 0; }
+ol, ul { padding-left: 1.4rem; }
+ol li, ul li { margin: 0.35rem 0; }
+a { color: var(--cp-link); }
+a:hover { color: var(--cp-accent-hover); }
+code {
+  padding: 0.05em 0.3em;
+  border: 1px solid var(--cp-border);
+  border-radius: 0.25rem;
+  background: var(--cp-surface-soft);
+  font: 0.85em Consolas, "Courier New", Courier, monospace;
+  overflow-wrap: anywhere;
+}
+.mono { font-family: Consolas, "Courier New", Courier, monospace; }
+.meta { margin-bottom: 0.4rem; color: var(--cp-text-muted); font-size: 0.95rem; }
+.note {
+  margin: 1.2rem 0;
+  padding: 0.5rem 0.9rem;
+  border-left: 3px solid var(--cp-link);
+  background: var(--cp-surface-soft);
+  color: var(--cp-text-muted);
+  font-size: 0.9rem;
+}
+.abstract { font-size: 0.98rem; }
+.keywords { color: var(--cp-text-muted); font-size: 0.9rem; }
+.equation {
+  margin: 1rem 0;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--cp-border);
+  border-radius: 0.625rem;
+  background: var(--cp-surface-soft);
+  text-align: center;
+  font: 0.9rem/1.6 Consolas, "Courier New", Courier, monospace;
+  overflow-x: auto;
+}
+figure { margin: 1.4rem 0; }
+figure svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--cp-border);
+  border-radius: 10px;
+  background: var(--cp-surface);
+}
+figcaption {
+  margin-top: 0.4rem;
+  color: var(--cp-text-muted);
+  font: 0.85rem/1.45 "Segoe UI", Aptos, Calibri, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.diagram text {
+  fill: var(--cp-text);
+  font-family: "Segoe UI", Aptos, Calibri, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.diagram .muted { fill: var(--cp-text-muted); }
+.diagram .mono { font-family: Consolas, "Courier New", Courier, monospace; }
+.diagram .surface { fill: var(--cp-surface); stroke: var(--cp-border-strong); }
+.diagram .soft { fill: var(--cp-surface-soft); stroke: var(--cp-border); }
+.diagram .accent { fill: var(--cp-surface-soft); stroke: var(--cp-link); }
+.diagram .accent-line { stroke: var(--cp-link); }
+.diagram .success { fill: var(--cp-surface); stroke: var(--cp-success); }
+.diagram .success-text { fill: var(--cp-success); }
+.diagram .warning { fill: var(--cp-surface); stroke: var(--cp-warning); }
+.diagram .warning-text { fill: var(--cp-warning); }
+table {
+  width: 100%;
+  margin: 1rem 0 1.5rem;
+  border-collapse: collapse;
+  border: 1px solid var(--cp-border);
+  font-size: 0.82rem;
+}
+th, td {
+  padding: 0.52rem 0.58rem;
+  border-bottom: 1px solid var(--cp-border);
+  text-align: left;
+  vertical-align: top;
+}
+th { background: var(--cp-surface-soft); }
+tr:last-child td { border-bottom: 0; }
+.den { color: var(--cp-text-muted); font-size: 0.92em; }
+.references li { margin-bottom: 0.55rem; }
+footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--cp-border);
+  color: var(--cp-text-muted);
+  font-size: 0.85rem;
+}
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  main { padding: 1.5rem 0.9rem 3rem; }
+  h1 { font-size: 1.5rem; }
+  table { display: block; overflow-x: auto; }
+}
+@media print {
+  body { background: var(--cp-surface); }
+  main { max-width: none; padding: 0; }
+  figure, table { break-inside: avoid; }
+  a { color: var(--cp-text); text-decoration: none; }
+}
+</style>
+</head>
+<body>
+<main>
+<h1>Dimensional Bottles: Cached Static Intelligence with Per-Call Data Slosh over Immutable Frames</h1>
+<p class="meta">Kody Wildfeuer · RapterBox LLC · August&nbsp;28,&nbsp;2026</p>
+<p class="note">Public preprint. First public disclosure: August&nbsp;29,&nbsp;2026. The
+architecture was reduced to practice in RAPP Zoo v1.2.0 on
+August&nbsp;28/29,&nbsp;2026. No constituent mechanism below—event projection,
+static/dynamic binding, declarative visualization, asynchronous refresh, content
+addressing, or procedural memory—is claimed as individually new. The contribution claimed
+is the restricted artifact contract and its implemented composition. This preprint has not
+undergone peer review.</p>
+
+<h2>Abstract</h2>
+<p class="abstract">
+Applications built around large language models often recompute stable interpretive
+structure together with changing input data. We present <b>dimensional bottles</b>, a
+restricted projection-artifact contract that separates a reusable specification from an
+immutable source event and its per-call binding (informally, the <i>data slosh</i>). A
+bottle combines deterministic selection metadata, a bounded scene specification,
+frame-hash provenance, renderer compatibility, and an immutable successor policy. A fixed
+local runtime can project a new frame without invoking a model; optional tool-enabled model
+refinement may propose a successor, but generated-bottle persistence remains subject to an
+independent application capability and revalidation. We implemented the contract in RAPP
+Zoo v1.2.0. Two process-separated, counterbalanced benchmark runs each retained
+200 raw match observations and 90 raw renderer observations against one pinned frame and
+the clean three-bottle catalog. Matcher medians were 1.4 and 1.2&nbsp;ms; child
+renderer-ready medians were 145.7 and 99.8&nbsp;ms. Two separate end-to-end refinement
+observations completed in 17.934 and 26.208&nbsp;s. One source frame was projected through
+two specifications as observably different identity and briefing views while retaining the
+same frame hash, and one generated successor persisted across application restart. The
+results establish single-host feasibility and execution ordering, not performance
+superiority, human usefulness, publisher authenticity, cross-device determinism, or
+monetary savings.
+</p>
+<p class="keywords"><b>Keywords:</b> immutable events; declarative projection; local-first
+systems; semantic caching; materialized views; procedural memory; content addressing;
+large language models.</p>
+
+<h2>1&nbsp;·&nbsp;Introduction</h2>
+<p>During implementation of a live estate briefing, a stable visual and interpretive
+specification was repeatedly carried through a model path even though only the current
+census had changed. The same system could select a local specification and initialize its
+renderer in approximately one tenth of a second, while creation of a new specification
+required tens of seconds. The thesis of this work is narrow: when interpretation is stable
+relative to the arrival rate of source events, it can be represented as an explicit
+artifact and removed from the model-critical path.</p>
+<p>The static/dynamic split itself is established in event-sourced projections,
+materialized views, partial evaluation, reactive visualization, prompt reuse, and
+procedural memory [5]–[18]. Dimensional bottles do not replace those ideas. They combine
+selected properties into one deliberately restricted contract: an immutable event is
+matched to a bounded data specification; a fixed local runtime computes a fresh
+projection; registry transport carries data rather than renderer code; and accepted model
+refinement creates a successor artifact rather than mutating its predecessor.</p>
+<p>We claim four contributions: (1) a closed bottle schema coupling applicability metadata,
+scene constraints, frame-hash provenance, and renderer compatibility; (2) a data-only
+transport and local execution boundary whose guarantees and omissions are stated
+explicitly; (3) a successor-on-accepted-refinement lifecycle separating content-derived
+local naming, minted identity, and transport digests; and (4) an artifact-backed
+implementation and single-host microbenchmark. The evaluation asks whether the
+model-independent path executes as designed, whether one frame can support observably
+different projections without source mutation, and which trust properties the implemented
+transport and runtime do—and do not—provide.</p>
+
+<h2>2&nbsp;·&nbsp;Substrate and artifact contract</h2>
+<p>The source substrate is RAPP/1 [1]: an eleven-key immutable frame with
+domain-separated payload and whole-frame hashes, registered event kinds, chain links, and
+optional detached JWS authentication using canonical JSON [2]–[4]. RAPP/1 is prior work
+by the same author and is not claimed here.</p>
+
+<h3>2.1 Source frame</h3>
+<p>The released foundry receives one frame rather than a stream repository. It therefore
+accepts a structurally and cryptographically self-consistent registered-kind genesis:
+exact key set, kind/stream-family compatibility, payload and frame hashes, genesis and wire
+rules, and verification of any present signature through configured registry material. An
+unsigned body or memory genesis establishes content integrity but not authenticated
+authorship or independent stream-of-record status. The current route exposes no
+non-genesis interface; such an interface would require a previously verified head,
+external stream binding, rollback state, and fork handling.</p>
+
+<h3>2.2 Bottle and per-call binding</h3>
+<p>A bottle <i>B</i> is a closed projection specification containing an identifier and
+RAPPID, version, finite applicability dimensions, renderer contract, full seed, projection
+kind, scene constraints, and binding rule. “Static intelligence” is used operationally:
+the record contains explicit interpretive decisions, not model weights or independent
+reasoning. The per-call binding <i>S(F)</i>, informally the data slosh, contains the
+verified frame and optional bounded local context. It is not persisted as bottle memory and
+confers no identity or authority.</p>
+
+<h3>2.3 Projection and accepted refinement</h3>
+<div class="equation">Y<sub>t,B</sub> = Render(B, S(F<sub>t</sub>), H(F<sub>t</sub>))</div>
+<div class="equation">B' = Persist(Validate(Model(B, F<sub>t</sub>, S(F<sub>t</sub>))))</div>
+<p>The first expression is local projection. Neither <i>B</i> nor <i>F</i> changes. The
+second is optional refinement. Acceptance mints a fresh RAPPID and a collision-resistant,
+content-derived 96-bit local name; it does not make the generated identity or completed
+record content-addressed. RAR transport separately hashes serialized public records.</p>
+
+<figure>
+<svg class="diagram" viewBox="0 0 720 220" role="img" aria-label="One immutable frame is projected through two reusable bottle specifications to produce two different views" font-size="13">
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="var(--cp-link)"/></marker></defs>
+  <rect class="accent" x="18" y="73" width="154" height="72" rx="9"/>
+  <text x="95" y="99" text-anchor="middle" font-weight="700">SOURCE FRAME</text>
+  <text class="mono muted" x="95" y="121" text-anchor="middle" font-size="11">frame_hash fbb86c…</text>
+  <text class="muted" x="95" y="138" text-anchor="middle" font-size="11">unchanged</text>
+  <path class="accent-line" d="M172 109 C210 109 202 52 242 52" fill="none" stroke-width="1.7" marker-end="url(#a)"/>
+  <path class="accent-line" d="M172 109 C210 109 202 166 242 166" fill="none" stroke-width="1.7" marker-end="url(#a)"/>
+  <rect class="surface" x="248" y="25" width="190" height="55" rx="8"/>
+  <rect class="surface" x="248" y="139" width="190" height="55" rx="8"/>
+  <text x="343" y="50" text-anchor="middle" font-weight="700">IDENTITY BOTTLE</text>
+  <text class="muted" x="343" y="68" text-anchor="middle" font-size="11">character projection spec</text>
+  <text x="343" y="164" text-anchor="middle" font-weight="700">BRIEFING BOTTLE</text>
+  <text class="muted" x="343" y="182" text-anchor="middle" font-size="11">operational projection spec</text>
+  <line class="accent-line" x1="438" y1="52" x2="512" y2="52" stroke-width="1.7" marker-end="url(#a)"/>
+  <line class="accent-line" x1="438" y1="166" x2="512" y2="166" stroke-width="1.7" marker-end="url(#a)"/>
+  <rect class="success" x="518" y="25" width="184" height="55" rx="8"/>
+  <rect class="success" x="518" y="139" width="184" height="55" rx="8"/>
+  <text x="610" y="50" text-anchor="middle" font-weight="700">Sable-ling</text>
+  <text class="success-text" x="610" y="68" text-anchor="middle" font-size="11">identity view</text>
+  <text x="610" y="164" text-anchor="middle" font-weight="700">The Briefing</text>
+  <text class="success-text" x="610" y="182" text-anchor="middle" font-size="11">data view</text>
+</svg>
+<figcaption><b>§2 — Same source, different specifications.</b> The implementation observed
+two different outputs carrying the same source-frame hash. No perceptual or semantic
+distance metric was applied.</figcaption>
+</figure>
+
+<h2>3&nbsp;·&nbsp;Design</h2>
+
+<h3>3.1 Restricted projection artifact</h3>
+<p>The contract enforces five properties. First, projection does not edit the frame.
+Second, ordinary projection does not edit the bottle. Third, per-call bindings disappear
+without erasing the specification. Fourth, different bottles may project one frame without
+asserting different source facts. Fifth, accepted refinement creates a successor rather
+than overwriting the predecessor. These properties are implementation invariants, not
+claims of new view or lens theory.</p>
+
+<h3>3.2 Deterministic selection</h3>
+<p>Let <i>T(F,q)</i> be normalized tokens from the frame kind, payload, and optional query,
+and <i>D(B)</i> the bottle's applicability dimensions. The current selector scores exact
+overlap and bounded substring affinity:</p>
+<div class="equation">score(B,F,q) = 4 · |D(B) ∩ T(F,q)| + affinity(D(B), T(F,q))</div>
+<p>Ties are ordered by identifier. If every score is zero, the frame hash selects a stable
+fallback. This simple selector is not claimed as a novel retrieval algorithm; it makes the
+artifact choice inspectable and model-independent.</p>
+
+<h3>3.3 Local path and refinement path</h3>
+<p>The local path verifies the input, selects a bottle, initializes the fixed renderer, and
+applies the per-call binding. In parallel, the application may send the same frame and
+selection to a tool-enabled local agent runtime and language model. The general pattern of
+immediate local work plus asynchronous refresh is established [21]; here it is one part of
+the bottle contract, not a standalone contribution.</p>
+<p>Model output is parsed by Electron and revalidated by the Zoo before it can enter
+<code>/api/holograms/generated</code>, which additionally requires an Electron-held
+capability. A validation agent was installed and its invocation was observed in one
+refinement run, but orchestration does not require an agent receipt. Electron and Zoo
+validation are the enforced generated-bottle gates.</p>
+
+<figure>
+<svg class="diagram" viewBox="0 0 720 210" role="img" aria-label="The local projection path and optional model refinement path share one verified source but have separate completion points" font-size="13">
+  <defs><marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="var(--cp-link)"/></marker></defs>
+  <text x="18" y="31" font-weight="700">LOCAL PROJECTION</text>
+  <rect class="accent" x="18" y="45" width="118" height="46" rx="8"/><text x="77" y="73" text-anchor="middle">verify</text>
+  <rect class="surface" x="176" y="45" width="118" height="46" rx="8"/><text x="235" y="73" text-anchor="middle">select B</text>
+  <rect class="success" x="334" y="45" width="150" height="46" rx="8"/><text x="409" y="73" text-anchor="middle">render Y</text>
+  <line class="accent-line" x1="136" y1="68" x2="170" y2="68" stroke-width="1.7" marker-end="url(#b)"/>
+  <line class="accent-line" x1="294" y1="68" x2="328" y2="68" stroke-width="1.7" marker-end="url(#b)"/>
+  <text class="success-text" x="588" y="73" text-anchor="middle" font-size="12">model not required</text>
+
+  <text x="18" y="139" font-weight="700">OPTIONAL REFINEMENT</text>
+  <rect class="surface" x="18" y="153" width="145" height="46" rx="8"/><text x="90" y="181" text-anchor="middle">tool-enabled model</text>
+  <rect class="surface" x="211" y="153" width="145" height="46" rx="8"/><text x="283" y="181" text-anchor="middle">parse + validate</text>
+  <rect class="warning" x="404" y="153" width="145" height="46" rx="8"/><text x="476" y="181" text-anchor="middle">capability gate</text>
+  <rect class="success" x="597" y="153" width="105" height="46" rx="8"/><text x="649" y="181" text-anchor="middle">persist B'</text>
+  <line class="accent-line" x1="163" y1="176" x2="205" y2="176" stroke-width="1.7" marker-end="url(#b)"/>
+  <line class="accent-line" x1="356" y1="176" x2="398" y2="176" stroke-width="1.7" marker-end="url(#b)"/>
+  <line class="accent-line" x1="549" y1="176" x2="591" y2="176" stroke-width="1.7" marker-end="url(#b)"/>
+</svg>
+<figcaption><b>§3.3 — Separate completion points.</b> Local projection and successor
+creation share a source frame, but only the latter depends on model and tool execution.</figcaption>
+</figure>
+
+<h3>3.4 Successor creation and persistence</h3>
+<p>Random refinement adds fresh entropy; deterministic refinement derives its seed from the
+frame and validated design. The local identifier retains 96 seed bits and stays within the
+RAPPID slug bound. On the tested filesystem, publication uses an exclusive temporary file
+and hard link, providing an atomic no-clobber point. A randomized collision is detected and
+retried; deterministic reuse is allowed only when full seed and source frame match.
+Directory-fsync crash durability and filesystems without hard-link support were not
+evaluated.</p>
+
+<h3>3.5 Data-only transport</h3>
+<p>RAR publishes a mutable index containing record URLs and SHA-256 digests. The Zoo
+fetches an allowlisted record, verifies byte equality with the digest in the currently
+fetched index, checks exact record and scene schemas, and installs the bytes. This provides
+current-index-relative integrity, not publisher authentication, freshness, rollback
+protection, or an immutable local admission receipt. A signed or commit-pinned monotonic
+index would be required for those stronger properties.</p>
+<p>Bottle fields are bounded data and are not interpreted as executable renderer
+components. Recognized remote URLs and active-script forms are rejected; other
+code-looking strings may pass as text but are rendered inertly through text or canvas
+operations. The paper therefore claims a non-evaluating renderer boundary, not semantic
+detection of every possible program fragment.</p>
+
+<h3>3.6 Execution and transport threat model</h3>
+<p>The local agent runtime is intentionally tool-enabled and runs with ordinary user
+privileges. It can cause side effects through installed tools, including persistence paths
+other than generated-bottle admission. Frame payloads and public bottle strings enter its
+prompt as untrusted data, so prompt injection and tool misuse remain in the threat model.
+The narrow enforced claim is that the Brainstem cannot commit a generated design through
+<code>/api/holograms/generated</code> without the Electron capability and independent Zoo
+validation.</p>
+<p>The renderer iframe has a discriminated message envelope and verifies source window,
+schema tag, and bottle identifier. The context object is not exact-schema, depth, or size
+validated; this is an implementation gap. Desktop messages could target the exact
+<code>hologram.localhost</code> origin, while opaque mobile children require a different
+origin strategy. The child document denies network connections.</p>
+<p>A remotely exposed PWA control plane additionally requires an authenticated HTTPS
+reverse proxy or trusted tunnel. The release does not provide one, and its mobile evidence
+is a mobile-sized browser test on the local host—not a secure remote deployment or a
+physical-device result.</p>
+
+<h3>3.7 Runtime ownership</h3>
+<p>The desktop supervisor expects an explicitly installed local Brainstem or explicit path
+overrides; it does not execute a remote installer. Existing-process adoption checks
+reported source path, soul path, and required agents, but does not cryptographically attest
+the Brainstem binary. Spawn failures become visible failed states. Disabling Python
+bytecode generation prevented launch-time <code>.pyc</code> creation, and the tested
+macOS bundle remained signature-valid after launch; this observation does not make the
+unpacked application resources generally write-proof.</p>
+
+<figure>
+<svg class="diagram" viewBox="0 0 720 260" role="img" aria-label="Implemented trust boundaries distinguish current-index byte integrity, local rendering, tool-enabled model execution, and generated-bottle admission" font-size="13">
+  <defs><marker id="c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="var(--cp-link)"/></marker></defs>
+  <rect class="surface" x="18" y="28" width="170" height="68" rx="8"/>
+  <text x="103" y="52" text-anchor="middle" font-weight="700">MUTABLE RAR INDEX</text>
+  <text class="muted" x="103" y="72" text-anchor="middle" font-size="11">record URL + digest</text>
+  <text class="muted" x="103" y="87" text-anchor="middle" font-size="10">integrity, not authenticity</text>
+  <rect class="accent" x="275" y="28" width="170" height="68" rx="8"/>
+  <text x="360" y="52" text-anchor="middle" font-weight="700">ZOO RECORD GATE</text>
+  <text class="muted" x="360" y="72" text-anchor="middle" font-size="11">hash + exact schema</text>
+  <text class="muted" x="360" y="87" text-anchor="middle" font-size="10">before local install</text>
+  <rect class="success" x="532" y="28" width="170" height="68" rx="8"/>
+  <text x="617" y="52" text-anchor="middle" font-weight="700">FIXED RENDERER</text>
+  <text class="muted" x="617" y="72" text-anchor="middle" font-size="11">bounded inert data</text>
+  <text class="muted" x="617" y="87" text-anchor="middle" font-size="10">sandbox · no network</text>
+  <line class="accent-line" x1="188" y1="62" x2="269" y2="62" stroke-width="1.7" marker-end="url(#c)"/>
+  <line class="accent-line" x1="445" y1="62" x2="526" y2="62" stroke-width="1.7" marker-end="url(#c)"/>
+
+  <rect class="warning" x="96" y="170" width="200" height="68" rx="8"/>
+  <text x="196" y="194" text-anchor="middle" font-weight="700">TOOL-ENABLED MODEL</text>
+  <text class="warning-text" x="196" y="214" text-anchor="middle" font-size="11">side effects possible</text>
+  <text class="muted" x="196" y="229" text-anchor="middle" font-size="10">prompt data is untrusted</text>
+  <rect class="accent" x="424" y="170" width="200" height="68" rx="8"/>
+  <text x="524" y="194" text-anchor="middle" font-weight="700">GENERATED-BOTTLE GATE</text>
+  <text class="muted" x="524" y="214" text-anchor="middle" font-size="11">Electron capability</text>
+  <text class="muted" x="524" y="229" text-anchor="middle" font-size="10">parse + Zoo revalidation</text>
+  <line class="accent-line" x1="296" y1="204" x2="418" y2="204" stroke-width="1.7" marker-end="url(#c)"/>
+</svg>
+<figcaption><b>§3.6 — Implemented authority boundaries.</b> The public-record path and the
+tool-enabled refinement path have different guarantees. The latter is not a general
+least-privilege sandbox.</figcaption>
+</figure>
+
+<h2>4&nbsp;·&nbsp;Reduction to practice</h2>
+
+<h3>4.1 Artifact and measurement protocol</h3>
+<p>The implementation is RAPP Zoo v1.2.0 [22], built from source commit
+<code>35e316fa4c4e95790d56db631abf6231698742c2</code> and released at merge commit
+<code>42f06849b576d5d596f210390ca04e5295ea86c7</code>. The public bottle records and
+agent admission are recorded in [23] and [24].</p>
+<p>Measurements ran on an Apple M4 Max host with 16 logical CPUs and 128&nbsp;GiB RAM under
+Darwin 25.6.0, Electron 43.2.0, Brainstem 0.6.16, and Three.js r128. A published benchmark
+script drove the Electron page through the Chrome DevTools Protocol. Runs A and B used
+separate Electron processes and separate user-data directories, one isolated RAPP home,
+the clean three-bottle catalog, and the same archived frame fixture. Each run used ten
+matcher warm-ups followed by 200 retained matcher observations and 30 Latin-rotated rounds
+across three bottles (90 retained renderer observations). Each bottle appeared ten times
+in each order position. No samples were excluded.</p>
+<p>Matcher time spans one loopback <code>/api/holograms/match</code> request and JSON
+response. Renderer-ready time starts at <code>openHologram()</code> and ends when the child
+posts <code>rapp-zoo-hologram-ready</code> after its first synchronous
+<code>renderer.render</code> call. Bound time ends after the child rebuilds with the
+per-call binding and posts <code>rapp-zoo-hologram-bound</code>; it is not a compositor
+presentation measurement. Percentiles use nearest rank,
+<code>sorted[ceil(p·n)-1]</code>.</p>
+
+<h3>4.2 Local microbenchmark</h3>
+<table>
+<thead>
+<tr><th>Run</th><th>Endpoint</th><th>n</th><th>Median</th><th>p95</th><th>Maximum</th></tr>
+</thead>
+<tbody>
+<tr><td>A</td><td>matcher request</td><td>200</td><td>1.4 ms</td><td>1.6 ms</td><td>2.6 ms</td></tr>
+<tr><td>B</td><td>matcher request</td><td>200</td><td>1.2 ms</td><td>1.5 ms</td><td>1.8 ms</td></tr>
+<tr><td>A</td><td>renderer ready, mixed bottle/cache</td><td>90</td><td>145.7 ms</td><td>271.1 ms</td><td>363.8 ms</td></tr>
+<tr><td>B</td><td>renderer ready, mixed bottle/cache</td><td>90</td><td>99.8 ms</td><td>160.8 ms</td><td>291.9 ms</td></tr>
+<tr><td>A</td><td>binding complete, mixed bottle/cache</td><td>90</td><td>149.5 ms</td><td>274.9 ms</td><td>367.7 ms</td></tr>
+<tr><td>B</td><td>binding complete, mixed bottle/cache</td><td>90</td><td>104.6 ms</td><td>164.2 ms</td><td>294.0 ms</td></tr>
+</tbody>
+</table>
+<p>Per-bottle renderer-ready medians in runs A/B were 157.1/91.5&nbsp;ms for Holo Avatar,
+132.8/101.4&nbsp;ms for The Briefing, and 132.0/100.4&nbsp;ms for HOLO in the Nexus. The
+corresponding p95 values were 231.6/170.4, 275.9/155.8, and 230.9/158.7&nbsp;ms. These are
+mixed-cache measurements: the experiment counterbalances order but does not separately
+identify process-cold, shared-asset-cold, renderer-cold, and warm conditions.</p>
+<p>Two separate end-to-end refinement observations completed in 17.934 and 26.208&nbsp;s.
+They were not collected as part of the matcher/renderer traces and are not a distribution.
+One recorded 17.934&nbsp;s run includes an observed <code>HologramForge</code> tool log;
+the enforced admission remained Electron parsing, the Electron capability, and Zoo
+revalidation.</p>
+
+<figure>
+<svg class="diagram" viewBox="0 0 720 250" role="img" aria-label="Two repeated local benchmark runs are shown separately from two end-to-end model refinement observations" font-size="13">
+  <text x="18" y="31" font-weight="700">LOCAL MICROBENCHMARK — PROCESS-SEPARATED RUNS</text>
+  <rect class="surface" x="18" y="47" width="205" height="62" rx="8"/>
+  <text x="120" y="70" text-anchor="middle" font-weight="700">MATCH REQUEST</text>
+  <text class="mono success-text" x="120" y="90" text-anchor="middle" font-size="11">A 1.4 / 1.6 ms</text>
+  <text class="mono success-text" x="120" y="104" text-anchor="middle" font-size="11">B 1.2 / 1.5 ms</text>
+  <rect class="surface" x="258" y="47" width="205" height="62" rx="8"/>
+  <text x="360" y="70" text-anchor="middle" font-weight="700">openHologram → READY</text>
+  <text class="mono success-text" x="360" y="90" text-anchor="middle" font-size="11">A 145.7 / 271.1 ms</text>
+  <text class="mono success-text" x="360" y="104" text-anchor="middle" font-size="11">B 99.8 / 160.8 ms</text>
+  <rect class="surface" x="498" y="47" width="204" height="62" rx="8"/>
+  <text x="600" y="70" text-anchor="middle" font-weight="700">openHologram → BOUND</text>
+  <text class="mono success-text" x="600" y="90" text-anchor="middle" font-size="11">A 149.5 / 274.9 ms</text>
+  <text class="mono success-text" x="600" y="104" text-anchor="middle" font-size="11">B 104.6 / 164.2 ms</text>
+  <text class="muted" x="360" y="130" text-anchor="middle" font-size="10.5">values are median / p95; n = 200 matcher and 90 renderer observations per run</text>
+
+  <text x="18" y="174" font-weight="700">SEPARATE REFINEMENT OBSERVATIONS</text>
+  <rect class="warning" x="158" y="188" width="180" height="45" rx="8"/>
+  <rect class="warning" x="382" y="188" width="180" height="45" rx="8"/>
+  <text x="248" y="216" text-anchor="middle">17.934 s</text>
+  <text x="472" y="216" text-anchor="middle">26.208 s</text>
+</svg>
+<figcaption><b>§4.2 — Measured intervals remain separate.</b> The renderer experiment
+starts at <code>openHologram()</code>; the two refinement durations came from different
+end-to-end runs and are not plotted on one causal timeline.</figcaption>
+</figure>
+
+<h3>4.3 Same-frame projection and persistence</h3>
+<p>Frame
+<code>fbb86cd78e2092a836c4de9602f072d7b22f0f8bc5b1bf92dffb40f7ce01f0e5</code>
+was projected through Holo Avatar and The Briefing. The outputs were observably different:
+the first was a live identity view titled <i>Sable-ling</i>; the second was a live data
+briefing. Both displayed the same source prefix, and the parent retained the same complete
+frame hash before and after both projections. No output-distance metric was applied.</p>
+<p>One generated bottle persisted across a full application restart and was subsequently
+projected without a model request. A forced randomized identifier collision was detected,
+new entropy was selected, and the original file remained byte-identical. The latter
+establishes no-clobber behavior on the tested filesystem, not power-loss durability.</p>
+
+<h3>4.4 Validation and package observations</h3>
+<p>The released tree passed 48 Python/RAPP tests, 18 Electron tests, the pinned official
+RAPP checker, and package builds on macOS, Windows, and Linux. These results support
+protocol validation, schema enforcement, collision handling, and buildability; CI did not
+launch every packaged platform or reproduce the local browser observations. A separate
+local transcript records post-launch <code>codesign --verify --deep --strict</code>
+success for the macOS bundle and the absence of generated bytecode in its unpacked Python
+resources.</p>
+
+<h3>4.5 Artifact availability</h3>
+<p>The companion artifact archive contains the exact benchmark script, both raw benchmark
+runs (400 matcher and 180 renderer samples total), full trial order and labels, the pinned
+three-bottle catalog requirement, exact benchmark frame, percentile rule, implementation
+and paper hashes, a replayable same-frame harness with hash-bound iframe-only screenshots,
+both refinement observations, a replayable redacted signing chronology, and the paper
+acceptance gate. The
+implementation and public records remain available through [22]–[24].</p>
+
+<h2>5&nbsp;·&nbsp;Related work and position</h2>
+<p>The nearest established system shape is
+<i>immutable event → versioned projector → derived view</i>. Event-sourced systems and
+their schema evolution are well established [5]; materialized views retain or maintain
+derived data [12]; one-way projection is a strict subset of the bidirectional lens problem
+[11]. Reactive Vega demonstrates a persistent declarative specification over changing
+streams [6], and partial evaluation formalizes specialization of static program structure
+against dynamic input [7]. Dimensional bottles do not introduce these mechanisms. Their
+narrow distinction is the combined artifact contract: deterministic applicability
+metadata, fixed allowlisted scene schema, frame-hash provenance, digest-checked registry
+transport, fixed sandboxed execution, and immutable successor admission.</p>
+<p>Prompt Cache and related inference systems reuse static prompt structure while retaining
+the model on the execution path [8]. Semantic answer caches replay a prior output for an
+approximately matching request [9], while RAG retrieves evidence for model generation
+[10]. A bottle instead accepts an exact unseen frame and recomputes a fresh local
+projection without a model. The two-path execution policy is nevertheless an instance of
+the established immediate-result/background-refresh pattern [21], not an independent
+novelty claim.</p>
+<p>Declarative and generated visualization are particularly close. Vega-Lite specifies
+portable JSON graphics [13]; Data2Vis and LIDA generate visualization specifications from
+data or language [14], [15]. Bottles differ by restricting the executable surface,
+including deterministic selection and frame provenance, separating current-index record
+integrity from runtime authority, and requiring accepted refinement to become a successor
+artifact. These additions are a systems composition, not a new grammar of graphics.</p>
+<p>Procedural agent memories store reusable skills, workflows, or applicability cues for
+later tasks: Voyager maintains an executable skill library [16], Agent Workflow Memory
+retrieves induced workflows [17], and SkillLens uses visual skill cards with retrieval and
+verification signals [18]. MemGPT instead manages model-context memory tiers [20]. A bottle
+is narrower than procedural memory: it is bounded data interpreted by a fixed local
+renderer and can produce output without an executing model or agent. IPFS supplies a
+broader content-addressed systems comparison [19], but the generated bottle identity in
+the present implementation is not itself content-addressed.</p>
+
+<table>
+<thead>
+<tr><th>Approach</th><th>Retained artifact</th><th>Unseen input</th><th>Model required at use</th><th>Output behavior</th><th>Update rule</th></tr>
+</thead>
+<tbody>
+<tr><td>Semantic answer cache</td><td>prior answer</td><td>approximate query match</td><td>no on hit</td><td>replay</td><td>replace/evict</td></tr>
+<tr><td>Prompt/KV cache</td><td>prompt module or activations</td><td>new suffix/input</td><td>yes</td><td>model continuation</td><td>cache lifecycle</td></tr>
+<tr><td>Event-sourced projector</td><td>projection code/read model</td><td>new events</td><td>no</td><td>recompute view</td><td>deploy/version</td></tr>
+<tr><td>Reactive visualization</td><td>declarative specification</td><td>new data</td><td>no</td><td>recompute scene</td><td>replace/version</td></tr>
+<tr><td>Procedural agent memory</td><td>skill/workflow/context</td><td>new task</td><td>usually</td><td>execute procedure</td><td>learn/overwrite/version</td></tr>
+<tr><td>Dimensional bottle</td><td>restricted projection specification</td><td>exact verified frame</td><td>no on local path</td><td>recompute projection</td><td>persist successor</td></tr>
+</tbody>
+</table>
+
+<h2>6&nbsp;·&nbsp;Limitations</h2>
+<p>This is a single-owner, single-host reduction and local microbenchmark. It has no
+alternative-system baseline, concurrent-load study, human usefulness evaluation,
+compositor-present measurement, independent operator, physical second-device reproduction,
+token accounting, monetary cost, or repeated model-refinement distribution. The two
+counterbalanced runs reduce fixed-order bias but remain mixed-cache; process-cold,
+shared-asset-cold, renderer-cold, and warm conditions are not separated. The fast path is
+model-independent by construction; one refinement completing under a model different from
+the requested default does not establish model-independent refinement.</p>
+<p>The trust boundary is also narrower than the initial design language suggested. RAR
+digests establish byte agreement with a mutable fetched index, not publisher authenticity
+or rollback resistance. The message channel is discriminated but not closed-schema. The
+tool-enabled Brainstem is not least-privilege and remains exposed to prompt injection from
+untrusted strings. Remote PWA use requires an authenticated HTTPS deployment that is not
+part of the release. The current scene grammar covers two projection families, and bottle
+governance across authors—versioning, revocation, composition, ownership transfer, and
+conflicting applicability vocabularies—remains untested.</p>
+<p>A peer-reviewed systems submission requires controlled baselines against an ordinary
+event projector, a declarative visualization specification, a plain static Three.js
+configuration, semantic answer caching, and model-first prompt reuse; randomized
+process-cold/warm experiments on multiple physical systems; raw first-present traces;
+repeated refinements with exact model, token, cost, and tool records; parser fuzzing; and an
+independent artifact evaluation. An HCI submission additionally requires evidence about
+comprehension, trust, authoring, or task outcomes.</p>
+
+<h2>7&nbsp;·&nbsp;Conclusion</h2>
+<p>The reduction demonstrates a restricted composition rather than a new static/dynamic
+programming primitive. A bounded projection specification can be selected for an immutable
+frame, executed by a fixed local renderer without a model, and retained unchanged while
+optional refinement proposes a separately identified successor. In the reported
+implementation, that contract supported repeated low-latency local execution,
+same-frame/different-view projection, digest-checked data transport, and cross-run reuse.
+The defensible result is therefore not that bottles supersede caches, views, visualization
+grammars, or procedural memory, but that their selected properties can be combined into an
+inspectable artifact and authority boundary: persist the specification, bind new data
+explicitly, preserve the source, and make refinement create a successor.</p>
+
+<h2>References</h2>
+<ol class="references">
+<li>K. Wildfeuer, “RAPP/1: Unified normative specification of identity,
+canonicalization, the frame, the wire, and the egg,” rev-6, 2026.
+<a href="https://kody-w.github.io/rapp-1/">https://kody-w.github.io/rapp-1/</a>.</li>
+<li>R. Rundgren, B. Jordan, and S. Erdtman, “JSON Canonicalization Scheme
+(JCS),” RFC 8785, 2020. doi: 10.17487/RFC8785.</li>
+<li>M. Jones, J. Bradley, and N. Sakimura, “JSON Web Signature (JWS),”
+RFC 7515, 2015. doi: 10.17487/RFC7515.</li>
+<li>M. Jones, “JSON Web Signature (JWS) Unencoded Payload Option,” RFC 7797,
+2016. doi: 10.17487/RFC7797.</li>
+<li>M. Overeem, M. Spoor, S. Jansen, and S. Brinkkemper, “An Empirical
+Characterization of Event Sourced Systems and Their Schema Evolution—Lessons
+from Industry,” <i>Journal of Systems and Software</i>, vol. 178, Art. 110970,
+2021. doi: 10.1016/j.jss.2021.110970.</li>
+<li>A. Satyanarayan, R. Russell, J. Hoffswell, and J. Heer, “Reactive Vega:
+A Streaming Dataflow Architecture for Declarative Interactive Visualization,”
+<i>IEEE Transactions on Visualization and Computer Graphics</i>, vol. 22,
+no. 1, pp. 659–668, 2016. doi: 10.1109/TVCG.2015.2467091.</li>
+<li>N. D. Jones, “An Introduction to Partial Evaluation,” <i>ACM Computing
+Surveys</i>, vol. 28, no. 3, pp. 480–503, 1996.
+doi: 10.1145/243439.243447.</li>
+<li>I. Gim, G. Chen, S. Lee, N. Sarda, A. Khandelwal, and L. Zhong,
+“Prompt Cache: Modular Attention Reuse for Low-Latency Inference,”
+<i>Proceedings of Machine Learning and Systems</i>, vol. 6, pp. 325–338, 2024.</li>
+<li>F. Bang, “GPTCache: An Open-Source Semantic Cache for LLM Applications
+Enabling Faster Answers and Cost Savings,” in <i>Proc. 3rd Workshop for
+Natural Language Processing Open Source Software</i>, pp. 212–218, 2023.
+doi: 10.18653/v1/2023.nlposs-1.24.</li>
+<li>P. Lewis et al., “Retrieval-Augmented Generation for Knowledge-Intensive
+NLP Tasks,” in <i>Advances in Neural Information Processing Systems</i>,
+vol. 33, pp. 9459–9474, 2020.</li>
+<li>J. N. Foster, M. B. Greenwald, J. T. Moore, B. C. Pierce, and A. Schmitt,
+“Combinators for Bidirectional Tree Transformations: A Linguistic Approach to
+the View-Update Problem,” <i>ACM Transactions on Programming Languages and
+Systems</i>, vol. 29, no. 3, Art. 17, 2007.
+doi: 10.1145/1232420.1232424.</li>
+<li>R. Chirkova and J. Yang, “Materialized Views,” <i>Foundations and Trends
+in Databases</i>, vol. 4, no. 4, pp. 295–405, 2012.
+doi: 10.1561/1900000020.</li>
+<li>A. Satyanarayan, D. Moritz, K. Wongsuphasawat, and J. Heer, “Vega-Lite:
+A Grammar of Interactive Graphics,” <i>IEEE Transactions on Visualization and
+Computer Graphics</i>, vol. 23, no. 1, pp. 341–350, 2017.
+doi: 10.1109/TVCG.2016.2599030.</li>
+<li>V. Dibia and C. Demiralp, “Data2Vis: Automatic Generation of Data
+Visualizations Using Sequence-to-Sequence Recurrent Neural Networks,”
+<i>IEEE Computer Graphics and Applications</i>, vol. 39, no. 5, pp. 33–46,
+2019. doi: 10.1109/MCG.2019.2924636.</li>
+<li>V. Dibia, “LIDA: A Tool for Automatic Generation of Grammar-Agnostic
+Visualizations and Infographics Using Large Language Models,” in
+<i>Proc. 61st Annual Meeting of the ACL: System Demonstrations</i>,
+pp. 113–126, 2023. doi: 10.18653/v1/2023.acl-demo.11.</li>
+<li>G. Wang et al., “Voyager: An Open-Ended Embodied Agent with Large
+Language Models,” arXiv:2305.16291, 2023.</li>
+<li>Z. Z. Wang, J. Mao, D. Fried, and G. Neubig, “Agent Workflow Memory,”
+arXiv:2409.07429, 2024.</li>
+<li>Z. Liu et al., “SkillLens: Visual Skill Cards for Retrieval-Augmented GUI
+Action Prediction and On-Policy Distillation,” arXiv:2608.10775, 2026.</li>
+<li>J. Benet, “IPFS—Content Addressed, Versioned, P2P File System,”
+arXiv:1407.3561, 2014.</li>
+<li>C. Packer et al., “MemGPT: Towards LLMs as Operating Systems,”
+arXiv:2310.08560, 2023. doi: 10.48550/arXiv.2310.08560.</li>
+<li>M. Nottingham, “HTTP Cache-Control Extensions for Stale Content,”
+RFC 5861, 2010. doi: 10.17487/RFC5861.</li>
+<li>RAPP Zoo, “v1.2.0—Hologram Bottle Foundry,” 2026.
+<a href="https://github.com/kody-w/rapp-zoo/releases/tag/v1.2.0">Release and
+implementation record</a>.</li>
+<li>RAR, “Dimensional hologram bottle records,”
+<a href="https://github.com/kody-w/RAR/pull/639">kody-w/RAR#639</a>, 2026.</li>
+<li>RAR, “Notarized HologramDOGG agent,”
+<a href="https://github.com/kody-w/RAR/issues/640">kody-w/RAR#640</a>, 2026.</li>
+</ol>
+
+<footer>
+<p>dimensional-bottles · first public disclosure 2026-08-29 · © 2026 RapterBox LLC ·
+substrate: <a href="https://kody-w.github.io/rapp-1/">rapp/1</a></p>
+</footer>
+</main>
+</body>
+</html>
