@@ -1,4 +1,6 @@
 .DS_Store
+__pycache__/
+*.pyc
 .dimensional-bottles-reproduction/
 extracted/
 independent-same-frame/
