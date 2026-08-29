@@ -1,0 +1,31 @@
+{
+  "schema": "dimensional-bottles-refinement-evidence/1.0",
+  "implementation_commit": "35e316fa4c4e95790d56db631abf6231698742c2",
+  "release_merge_commit": "42f06849b576d5d596f210390ca04e5295ea86c7",
+  "observations": [
+    {
+      "elapsed_ms": 26208,
+      "source_frame_hash": "19b6883633868b1ad0d06a1ab0120a58b632df1eb78bc8b71ab150cfa8c007c5",
+      "generated_bottle_id": "generated-the-fifth-lamp-keeps-the-ledger-blank-fe25bcbe",
+      "evidence_scope": "Browser-driven Electron run from frame submission through generated-bottle persistence and stable post-catch display."
+    },
+    {
+      "elapsed_ms": 17934,
+      "source_frame_hash": "0dc33e2ec66846be00765c7f45d2335d449c157fc5000f00d0c6deea10d2012d",
+      "generated_bottle_id": "generated-the-sixth-lamp-asks-who-reads-it-6989137fe6e3816c82fd9dfc",
+      "generated_bottle_rappid": "rappid:@kody-w/generated-the-sixth-lamp-asks-who-reads-it-6989137fe6e3816c82fd9dfc:eafd7a6b331de8e92c7ea610148ad42221234d320a88c4e74ae7920b60f101dd",
+      "seed": "6989137fe6e3816c82fd9dfc245243dbb1116ff6e7757d0825f8e594ef8397e7",
+      "id_suffix_bits": 96,
+      "agent_log": {
+        "agent": "HologramForge",
+        "status": "ok",
+        "source_frame_hash": "0dc33e2ec66846be00765c7f45d2335d449c157fc5000f00d0c6deea10d2012d",
+        "accepted_design_name": "The Sixth Lamp Asks Who Reads It",
+        "accepted_design_kind": "data-projection",
+        "accepted_design_accent": "cyan"
+      },
+      "evidence_scope": "Direct Electron bridge run from generated-frame retrieval through generated-bottle persistence."
+    }
+  ],
+  "enforcement_note": "HologramForge invocation was observed in the 17.934-second run. Electron and Zoo validation were the enforced persistence gates; the orchestration did not require an agent receipt."
+}

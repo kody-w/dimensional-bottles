@@ -1,0 +1,73 @@
+captured_utc=2026-08-29T03:30:16Z
+app_path=<RAPP_ZOO_APP>
+command=codesign --verify --deep --strict --verbose=2 <RAPP_ZOO_APP>
+--prepared:<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app/Contents/Frameworks/RAPP Zoo Helper (GPU).app
+--prepared:<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app/Contents/Frameworks/RAPP Zoo Helper (Plugin).app
+--prepared:<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app/Contents/Frameworks/Squirrel.framework/Versions/Current/.
+--prepared:<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app/Contents/Frameworks/Mantle.framework/Versions/Current/.
+--prepared:<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app/Contents/Frameworks/RAPP Zoo Helper (Renderer).app
+--validated:<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app/Contents/Frameworks/RAPP Zoo Helper (GPU).app
+--validated:<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app/Contents/Frameworks/Squirrel.framework/Versions/Current/.
+--validated:<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app/Contents/Frameworks/RAPP Zoo Helper (Renderer).app
+--validated:<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app/Contents/Frameworks/Mantle.framework/Versions/Current/.
+--prepared:<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app/Contents/Frameworks/RAPP Zoo Helper.app
+--prepared:<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app/Contents/Frameworks/ReactiveObjC.framework/Versions/Current/.
+--validated:<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app/Contents/Frameworks/RAPP Zoo Helper (Plugin).app
+--validated:<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app/Contents/Frameworks/RAPP Zoo Helper.app
+--validated:<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app/Contents/Frameworks/ReactiveObjC.framework/Versions/Current/.
+--prepared:<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app/Contents/Frameworks/Electron Framework.framework/Versions/Current/.
+--prepared:<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app/Contents/Frameworks/Electron Framework.framework/Versions/Current/Helpers/chrome_crashpad_handler
+--validated:<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app/Contents/Frameworks/Electron Framework.framework/Versions/Current/Helpers/chrome_crashpad_handler
+--validated:<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app/Contents/Frameworks/Electron Framework.framework/Versions/Current/.
+<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app: valid on disk
+<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app: satisfies its Designated Requirement
+prelaunch_signature_status=0
+command=find <RAPP_ZOO_APP>/Contents/Resources/app.asar.unpacked -name __pycache__ -o -name '*.pyc'
+prelaunch_bytecode_count=0
+command=RAPP_ZOO_HEADLESS=1 RAPP_ZOO_DESKTOP_DEV=1 RAPP_ZOO_CDP_PORT=9224 <RAPP_ZOO_APP>/Contents/MacOS/RAPP\ Zoo
+launch_pid=<pid>
+launch_utc=2026-08-29T03:30:16Z
+runtime_health_status=1
+shutdown_utc=2026-08-29T03:30:20Z
+command=codesign --verify --deep --strict --verbose=2 <RAPP_ZOO_APP>
+--prepared:<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app/Contents/Frameworks/RAPP Zoo Helper (Renderer).app
+--prepared:<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app/Contents/Frameworks/RAPP Zoo Helper.app
+--validated:<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app/Contents/Frameworks/RAPP Zoo Helper (Renderer).app
+--prepared:<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app/Contents/Frameworks/RAPP Zoo Helper (GPU).app
+--prepared:<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app/Contents/Frameworks/ReactiveObjC.framework/Versions/Current/.
+--prepared:<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app/Contents/Frameworks/Squirrel.framework/Versions/Current/.
+--prepared:<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app/Contents/Frameworks/RAPP Zoo Helper (Plugin).app
+--prepared:<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app/Contents/Frameworks/Mantle.framework/Versions/Current/.
+--validated:<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app/Contents/Frameworks/RAPP Zoo Helper.app
+--validated:<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app/Contents/Frameworks/RAPP Zoo Helper (GPU).app
+--validated:<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app/Contents/Frameworks/RAPP Zoo Helper (Plugin).app
+--validated:<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app/Contents/Frameworks/Mantle.framework/Versions/Current/.
+--validated:<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app/Contents/Frameworks/Squirrel.framework/Versions/Current/.
+--validated:<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app/Contents/Frameworks/ReactiveObjC.framework/Versions/Current/.
+--prepared:<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app/Contents/Frameworks/Electron Framework.framework/Versions/Current/.
+--prepared:<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app/Contents/Frameworks/Electron Framework.framework/Versions/Current/Helpers/chrome_crashpad_handler
+--validated:<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app/Contents/Frameworks/Electron Framework.framework/Versions/Current/Helpers/chrome_crashpad_handler
+--validated:<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app/Contents/Frameworks/Electron Framework.framework/Versions/Current/.
+<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app: valid on disk
+<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app: satisfies its Designated Requirement
+postlaunch_signature_status=0
+command=codesign -dv --verbose=2 <RAPP_ZOO_APP>
+Executable=<rapp-zoo-worktree>/release/mac-arm64/RAPP Zoo.app/Contents/MacOS/RAPP Zoo
+Identifier=io.github.kody-w.rapp-zoo
+Format=app bundle with Mach-O thin (arm64)
+CodeDirectory v=20500 size=453 flags=0x10000(runtime) hashes=3+7 location=embedded
+Signature size=9099
+Authority=Apple Development: [redacted] (X66H58S826)
+Authority=Apple Worldwide Developer Relations Certification Authority
+Authority=Apple Root CA
+Timestamp=Aug 28, 2026 at 9:12:38 PM
+Info.plist entries=32
+TeamIdentifier=V8383NT6BX
+Runtime Version=26.4.0
+Sealed Resources version=2 rules=13 files=51
+Internal requirements count=1 size=200
+command=find <RAPP_ZOO_APP>/Contents/Resources/app.asar.unpacked -name __pycache__ -o -name '*.pyc'
+postlaunch_bytecode_count=0
+command=shasum -a 256 <RAPP_ZOO_RELEASE_ZIP>
+b7c3a3b2d11af514814fced12a75039a10d67b96c6231ab30d82ddb2570a55af  <RAPP_ZOO_RELEASE_ZIP>
+bytecode_check=passed

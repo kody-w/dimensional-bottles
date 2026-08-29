@@ -1,0 +1,6 @@
+.DS_Store
+.dimensional-bottles-reproduction/
+extracted/
+independent-same-frame/
+independent-run-*.json
+independent-same-frame.json

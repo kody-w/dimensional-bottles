@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this preprint or artifact, please cite it as below."
+title: "Dimensional Bottles: Cached Static Intelligence with Per-Call Data Slosh over Immutable Frames"
+authors:
+  - family-names: Wildfeuer
+    given-names: Kody
+version: 0.1.0
+date-released: 2026-08-29
+url: "https://kody-w.github.io/dimensional-bottles/paper.html"
+repository-code: "https://github.com/kody-w/dimensional-bottles"
+abstract: >-
+  An artifact-backed systems preprint describing a restricted projection
+  contract that selects bounded data-only specifications for immutable RAPP/1
+  frames, renders them locally, and admits model-refined successors.
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Wildfeuer
+      given-names: Kody
+  title: "Dimensional Bottles: Cached Static Intelligence with Per-Call Data Slosh over Immutable Frames"
+  year: 2026
+  url: "https://kody-w.github.io/dimensional-bottles/paper.html"

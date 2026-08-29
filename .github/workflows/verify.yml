@@ -1,0 +1,80 @@
+name: Verify preprint artifact
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check harness syntax
+        run: |
+          node --check artifact/dimensional-bottles-benchmark.mjs
+          node --check artifact/dimensional-bottles-same-frame-harness.mjs
+          sh -n artifact/dimensional-bottles-codesign-check.sh
+
+      - name: Run repository artifact gate
+        working-directory: artifact
+        run: python dimensional-bottles-paper-gate.py
+
+      - name: Verify downloadable archive
+        run: |
+          echo "8f9086deda03b1761960edd1ff13f6b154d34bb908f788030286c1851fd818aa  artifact/dimensional-bottles-artifact.zip" | sha256sum -c -
+          mkdir extracted
+          unzip -q artifact/dimensional-bottles-artifact.zip -d extracted
+          cd extracted
+          python dimensional-bottles-paper-gate.py
+
+      - name: Verify paper copies
+        run: |
+          cmp paper.html artifact/dimensional-bottles-paper.html
+          python - <<'PY'
+          import hashlib
+          from pathlib import Path
+
+          expected = "048142baeb9771f096d9c7c80aa7f3646fe376778e2c1069e818609ec31d1090"
+          actual = hashlib.sha256(Path("paper.html").read_bytes()).hexdigest()
+          if actual != expected:
+              raise SystemExit(f"paper hash mismatch: {actual}")
+          print(actual)
+          PY
+
+  deploy:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: verify
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

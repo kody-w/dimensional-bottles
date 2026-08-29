@@ -1,0 +1,69 @@
+{
+  "schema": "dimensional-bottles-same-frame-evidence/2.0",
+  "captured_utc": "2026-08-29T13:53:42.918Z",
+  "harness_sha256": "5df0328d98ce8a57d337991a108d9b37512a3ce68ea0564a3f45857464474a4c",
+  "frame_fixture_sha256": "1a6279252929bbeb00f5226ba343946b8833701511222b76af52ed3714f8109b",
+  "catalog_ids": [
+    "holo-avatar",
+    "holo-briefing",
+    "holo-nexus"
+  ],
+  "frame": {
+    "frame_hash": "fbb86cd78e2092a836c4de9602f072d7b22f0f8bc5b1bf92dffb40f7ce01f0e5",
+    "kind": "body.pulse",
+    "payload": {
+      "dimensions": [
+        "briefing",
+        "status",
+        "census",
+        "character"
+      ],
+      "query": "Create a living briefing character for the current estate.",
+      "schema": "rapp-zoo-hologram-request/1.0",
+      "zoo": {
+        "holograms": 3,
+        "lineages": 0
+      }
+    },
+    "payload_hash": "61a950a31ef4aed90478cce32930f88f6b48d83e1e49ce614879a6634247be46",
+    "prev": null,
+    "prev_wave": null,
+    "seq": 0,
+    "sig": null,
+    "spec": "rapp/1",
+    "stream_id": "rappid:@kody-w/hologram-generator:21f419123bcb166e6fc46a43f53e63e5c8136005e7efcfb689bb80dbcc0453c2",
+    "utc": "2026-08-29T03:26:15.673Z"
+  },
+  "frame_hash_before": "fbb86cd78e2092a836c4de9602f072d7b22f0f8bc5b1bf92dffb40f7ce01f0e5",
+  "frame_hash_after": "fbb86cd78e2092a836c4de9602f072d7b22f0f8bc5b1bf92dffb40f7ce01f0e5",
+  "frame_json_unchanged": true,
+  "projections": [
+    {
+      "bottle": "holo-avatar",
+      "observation": {
+        "url": "http://hologram.localhost:7070/holograms/holo-avatar",
+        "ready": "true",
+        "title": "Sable-ling",
+        "kind": "LIVE IDENTITY HOLOGRAM",
+        "subtitle": "Same identity seed, same character on every machine.",
+        "facts": "artifact rappid:@kody-w/holo-avatar:ce3a3fef2bdcb4debdcc08a4d0e8a1982756d2e269719ccb342a5f734abaf8c2\nbottle caught and reusable\nseed fbb86cd78e2092a836c4de9602f0…\nbody broad\nbinding live zoo identity"
+      },
+      "screenshot": "dimensional-bottles-avatar.png",
+      "screenshot_sha256": "47bea6cf1837540ccc1ea52677ed0a020a66b6a63b4dde8d4c5c83a4b6d3663e"
+    },
+    {
+      "bottle": "holo-briefing",
+      "observation": {
+        "url": "http://hologram.localhost:7070/holograms/holo-briefing",
+        "ready": "true",
+        "title": "The Briefing",
+        "kind": "LIVE DATA HOLOGRAM",
+        "subtitle": "Bound to the current path-free zoo snapshot.",
+        "facts": "dogg rappid:@kody-w/holo-briefing:6cf05183da3770824c1d20bfcc0cead35d48d06f98f7764335f5ba7d2fdc8712\nbottle caught and reusable\ntrust LIVE\nrevision rev-6\nlineages 0\ninstances 0\neggs 0\ntick 0\nframe fbb86cd78e2092a836c4de96…"
+      },
+      "screenshot": "dimensional-bottles-briefing.png",
+      "screenshot_sha256": "a6a2bdcac0e6ec6813e2647f5edf0024f82812435b9230632e74f162af1091fe"
+    }
+  ],
+  "claim_scope": "The two outputs are observably different and carry one exact source frame. No perceptual or semantic distance metric is claimed."
+}

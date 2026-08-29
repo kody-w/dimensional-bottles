@@ -1,0 +1,67 @@
+name: Independent reproduction
+description: Submit a physical-device reproduction of the preprint artifact.
+title: "[REPRODUCTION] "
+labels:
+  - reproduction
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Follow `REPRODUCIBILITY.md` before submitting. Do not include credentials, tokens, usernames, or private filesystem paths.
+
+  - type: input
+    id: operator
+    attributes:
+      label: Operator
+      description: GitHub handle or pseudonym of the person who ran the experiment.
+    validations:
+      required: true
+
+  - type: input
+    id: device
+    attributes:
+      label: Physical device
+      description: Model, CPU/GPU, memory, and operating system.
+    validations:
+      required: true
+
+  - type: input
+    id: artifact_hash
+    attributes:
+      label: Artifact ZIP SHA-256
+    validations:
+      required: true
+
+  - type: dropdown
+    id: gate
+    attributes:
+      label: Did the clean artifact gate pass 21/21?
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+
+  - type: textarea
+    id: results
+    attributes:
+      label: Results
+      description: Paste the completed reproduction result JSON or link to a public gist/repository containing it.
+    validations:
+      required: true
+
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Raw evidence
+      description: Attach both benchmark JSON files, same-frame evidence, screenshots, and gate output.
+    validations:
+      required: true
+
+  - type: textarea
+    id: deviations
+    attributes:
+      label: Deviations or failures
+      description: Describe every deviation from the protocol, including unavailable tools or failed checks.
+    validations:
+      required: true

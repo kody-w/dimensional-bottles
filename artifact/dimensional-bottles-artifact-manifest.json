@@ -1,0 +1,41 @@
+{
+  "schema": "dimensional-bottles-artifact/1.0",
+  "title": "Dimensional Bottles: Cached Static Intelligence with Per-Call Data Slosh over Immutable Frames",
+  "publication_class": "single-host systems reduction and local microbenchmark preprint",
+  "created_utc": "2026-08-29T03:16:00Z",
+  "implementation": {
+    "repository": "kody-w/rapp-zoo",
+    "source_commit": "35e316fa4c4e95790d56db631abf6231698742c2",
+    "release_merge_commit": "42f06849b576d5d596f210390ca04e5295ea86c7",
+    "release": "https://github.com/kody-w/rapp-zoo/releases/tag/v1.2.0"
+  },
+  "raw_sample_counts": {
+    "matcher": 400,
+    "renderer": 180,
+    "benchmark_runs": 2
+  },
+  "files": {
+    "dimensional-bottles-paper.html": "048142baeb9771f096d9c7c80aa7f3646fe376778e2c1069e818609ec31d1090",
+    "dimensional-bottles-benchmark.mjs": "b7384497e660d745b59d564fd956bbbf83ad24848598dc0c5a0cc51f76553533",
+    "dimensional-bottles-benchmark-run-a.json": "40c3c6acf68ec325bd50f8b3e508e2eeb118c341e79bc28fa4e04130611bf032",
+    "dimensional-bottles-benchmark-run-b.json": "58e3c470fef4dace4e356d9107a55d095d0f8394ded0f7708df912da773a2b1b",
+    "dimensional-bottles-frame.json": "1a6279252929bbeb00f5226ba343946b8833701511222b76af52ed3714f8109b",
+    "dimensional-bottles-same-frame-harness.mjs": "5df0328d98ce8a57d337991a108d9b37512a3ce68ea0564a3f45857464474a4c",
+    "dimensional-bottles-same-frame-evidence.json": "0c4ec0e64bf568407c8f22a8238faa84b160c35658f845937676a729a98ca9c7",
+    "dimensional-bottles-avatar.png": "47bea6cf1837540ccc1ea52677ed0a020a66b6a63b4dde8d4c5c83a4b6d3663e",
+    "dimensional-bottles-briefing.png": "a6a2bdcac0e6ec6813e2647f5edf0024f82812435b9230632e74f162af1091fe",
+    "dimensional-bottles-refinement-evidence.json": "88c6a892a5feef8ab75c871c3fd2f55dd2b224a42e1799042fc0b1ab9d81057d",
+    "dimensional-bottles-codesign-check.sh": "e6afa46f6aea5e3700fa9f61bb79a5dab4fe8ca1a3e7e2218174a76481842cad",
+    "dimensional-bottles-codesign-evidence-redacted.txt": "4844f82c4e6ec9994446807fd2f937a3fff7de78007ad7ec7eabfb04a9e46ffc",
+    "dimensional-bottles-paper-gate.py": "f7d977574f918b35d6130ee155d631ef88de69b7c1d81869cf762b5f676f7998",
+    "dimensional-bottles-artifact-README.txt": "dd3277ecd42433f13f5a82e6af60e386dab5bac84379840274fb15ca83561813"
+  },
+  "known_open_evidence": [
+    "alternative-system baselines",
+    "physical cross-device reproduction",
+    "human-perceived first-pixel latency",
+    "repeated model token and monetary cost",
+    "independent artifact evaluation",
+    "human task-quality or trust outcomes"
+  ]
+}
