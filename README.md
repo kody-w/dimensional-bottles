@@ -1,5 +1,9 @@
 # Dimensional Bottles
 
+<!-- rapp1:network-header:start -->
+[![RAPP/1](https://kody-w.github.io/rapp-hive-public/portfolio/badges/dimensional-bottles.svg)](https://github.com/kody-w/rapp-hive-public/blob/main/portfolio/repos/dimensional-bottles.md) · **New to RAPP?** [Start here: get your Brainstem →](https://github.com/kody-w/rapp-installer#start-here)
+<!-- rapp1:network-header:end -->
+
 **Public preprint and reproducibility artifact.**
 
 Dimensional bottles are a restricted projection-artifact contract: an immutable RAPP/1 frame is matched to a bounded, data-only specification; a fixed local runtime computes a fresh projection; optional model refinement may propose a separately identified successor.
